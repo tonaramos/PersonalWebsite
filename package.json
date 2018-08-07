@@ -1,0 +1,49 @@
+{
+  "name": "personalwebsite",
+  "version": "1.0.0",
+  "description": "Tona Ramos Personal Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "webpack -d --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonaramos/personalWebsite.git"
+  },
+  "keywords": [
+    "tona",
+    "ramos",
+    "site"
+  ],
+  "author": "Gabriel Tonatiuh Ramos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonaramos/personalWebsite/issues"
+  },
+  "homepage": "https://github.com/tonaramos/personalWebsite#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
+}
