@@ -1,4 +1,5 @@
 import React from 'react';
+import MenuBar from './MenuBar';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,7 +11,10 @@ class App extends React.Component {
     return (
       <div>
         <div>
-          Hello World!
+          My personal Website
+        </div>
+        <div>
+          <MenuBar />
         </div>
       </div>
     );
