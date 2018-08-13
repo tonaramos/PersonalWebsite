@@ -16,7 +16,10 @@
     "ramos",
     "site"
   ],
-  "author": "Gabriel Tonatiuh Ramos",
+  "author": {
+    "name": "Tona Ramos",
+    "email": "gtonaramos@gmail.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tonaramos/personalWebsite/issues"
