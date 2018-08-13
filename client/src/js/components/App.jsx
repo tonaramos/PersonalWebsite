@@ -1,6 +1,11 @@
 import React from 'react';
 import MenuBar from './MenuBar';
 import Logo from './Logo';
+import Cover from './Cover';
+import About from './About';
+import Projects from './Projects';
+import Contact from './Contact';
+import Footer from './Footer';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,7 +21,11 @@ class App extends React.Component {
           <MenuBar />
         </div>
         <div className="board">
-          Gabriel Tonatiuh Ramos
+          <Cover />
+          <About />
+          <Projects />
+          <Contact />
+          <Footer />
         </div>
       </div>
     );

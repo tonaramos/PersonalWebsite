@@ -19,20 +19,23 @@ function Logo() {
         <g>
           <g>
             <g>
-              <g>
-                <filter id="shadow11112869" x="-7" y="-9" width="659" height="363.62" filterUnits="userSpaceOnUse" primitiveUnits="userSpaceOnUse">
-                  {/* <feFlood />
+              {/* <g>
+                <filter id="shadow11112869" x="-7" y="-9" width="659" height="363.62"
+                filterUnits="userSpaceOnUse" primitiveUnits="userSpaceOnUse">
+                  <feFlood />
                   <feComposite in2="SourceAlpha" operator="in" />
                   <feGaussianBlur stdDeviation="1" />
                   <feOffset dx="1" dy="1" result="afterOffset" />
                   <feFlood floodColor="#000000" floodOpacity="0.2" />
                   <feComposite in2="afterOffset" operator="in" />
                   <feMorphology operator="dilate" radius="1" />
-                  <feComposite in2="SourceAlpha" operator="out" /> */}
+                  <feComposite in2="SourceAlpha" operator="out" />
                 </filter>
-                <path d="M141.11 0L334.25 0L141.11 344.62L2 256.46L2 256.46L141.11 0ZM463.1 0L642 0L463.1 304.55L334.25 226.64L334.25 226.64L463.1 0Z" id="g90HVQ31J" fill="white" fillOpacity="1" filter="url(#shadow11112869)" />
-              </g>
-              <use xlinkHref="#dlLEytldC" opacity="0.9" fill="#000000" fillOpacity="1" />
+                 <path d="M141.11 0L334.25 0L141.11 344.62L2 256.46L2 256.46L141.11 0ZM463.1
+                 0L642 0L463.1 304.55L334.25 226.64L334.25 226.64L463.1 0Z"
+                id="g90HVQ31J" fill="white" fillOpacity="1" filter="url(#shadow11112869)"
+                className="logoHov" />
+              </g> */}
               <g>
                 <use xlinkHref="#dlLEytldC" opacity="0.9" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="1" />
               </g>
@@ -45,6 +48,7 @@ function Logo() {
               <g>
                 <use xlinkHref="#dlLEytldC" opacity="0.9" fillOpacity="0" stroke="#000000" strokeWidth="1" strokeOpacity="1" />
               </g>
+              <use xlinkHref="#dlLEytldC" opacity="0.9" fill="#000000" fillOpacity="1" className="logoHov" />
             </g>
           </g>
         </g>
