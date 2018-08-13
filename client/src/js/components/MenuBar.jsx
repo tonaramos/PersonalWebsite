@@ -8,17 +8,17 @@ class MenuBar extends React.Component {
 
   render() {
     return (
-      <div>
-        <li>
+      <div className="menuBar">
+        <li className="menuItem">
           Home
         </li>
-        <li>
-          Blog
+        <li className="menuItem">
+          Projects
         </li>
-        <li>
+        <li className="menuItem">
           About
         </li>
-        <li>
+        <li className="menuItem">
           Contact
         </li>
       </div>
