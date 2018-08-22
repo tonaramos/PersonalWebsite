@@ -20,7 +20,7 @@ class App extends React.Component {
         techStack: ['ReactJS', 'Node.js', 'MongoDB'],
       }, {
         id: 1,
-        name: 'Grayscale - restaurant review component',
+        name: 'Grayscale - restaurant review service',
         summary: 'Airbnb replica',
         description: 'Worked on back-end to ensure scalability for the service and reduce latancy',
         techStack: ['React.js', 'Node.js', 'PostgreSQL'],

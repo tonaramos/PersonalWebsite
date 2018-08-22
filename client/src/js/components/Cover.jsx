@@ -4,8 +4,22 @@ import PropTypes from 'prop-types';
 function Cover({ name }) {
   return (
     <div className="cover">
-      This is the Cover Section
-      {`Hello! /n my name is ${name}`}
+      <div className="coverTextArea">
+        <div className="coverText">
+          <p>
+            {'Hello!'}
+          </p>
+          <p>
+            {`my name is ${name}.`}
+          </p>
+          <p>
+            {'I am a web-developer'}
+          </p>
+        </div>
+      </div>
+      <div className="coverImageContainer">
+        <img alt="COVER PIC OF ME" />
+      </div>
     </div>
   );
 }

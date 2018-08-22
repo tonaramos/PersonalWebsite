@@ -3,7 +3,8 @@ import React from 'react';
 function About() {
   return (
     <div className="about">
-      This is the About Section
+      {/* <span>Hello,<span> */}
+      
     </div>
   );
 }
