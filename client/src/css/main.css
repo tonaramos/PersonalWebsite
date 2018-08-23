@@ -24,6 +24,18 @@ li {
   list-style-type: none;
 }
 
+/* ======== Single Classes ======== */
+.boldText {
+  font: bold;
+}
+
+.lightText {
+  font-weight: 300;
+}
+
+/* ======== Page App ======== */
+
+
 .pageContents {
   display: flex;
   flex-direction: column;
@@ -165,7 +177,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-}
+} 
 
 .formInputs {
   display: flex;

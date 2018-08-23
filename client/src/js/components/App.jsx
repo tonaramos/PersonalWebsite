@@ -32,12 +32,13 @@ class App extends React.Component {
         techStack: ['React.js', 'Node.js', 'Socket.io'],
       }],
     };
-    this.buttonHandler = this.summitMessageHandler.bind(this);
+    this.summitMessageHandler = this.summitMessageHandler.bind(this);
     this.nameChangeHandler = this.nameChangeHandler.bind(this);
   }
 
-  summitMessageHandler () {
+  summitMessageHandler (info) {
    console.log('the button was clicked!');
+   console.log('the info received', info);
   }
 
   nameChangeHandler(event) {
@@ -57,7 +58,7 @@ class App extends React.Component {
           <Cover name={this.state.name} />
           <About />
           <Projects list={this.state.projects} />
-          <Contact nameInput={this.nameChangeHandler} summitButton={this.summitMessageHandler} />
+          <Contact summitButton={this.summitMessageHandler} />
           <Footer />
         </div>
       </div>
