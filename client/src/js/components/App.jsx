@@ -32,11 +32,11 @@ class App extends React.Component {
         techStack: ['React.js', 'Node.js', 'Socket.io'],
       }],
     };
-    this.buttonHandler = this.buttonHandler.bind(this);
+    this.buttonHandler = this.summitMessageHandler.bind(this);
     this.nameChangeHandler = this.nameChangeHandler.bind(this);
   }
 
-  buttonHandler () {
+  summitMessageHandler () {
    console.log('the button was clicked!');
   }
 
@@ -50,15 +50,14 @@ class App extends React.Component {
         <div className="header">
           <Logo />
           <MenuBar />
-          <button type="button" onDoubleClick={this.buttonHandler}>
-            Double click button
-          </button>
+          
+            
         </div>
         <div className="board">
           <Cover name={this.state.name} />
           <About />
           <Projects list={this.state.projects} />
-          <Contact nameInput={this.nameChangeHandler} />
+          <Contact nameInput={this.nameChangeHandler} summitButton={this.summitMessageHandler} />
           <Footer />
         </div>
       </div>
