@@ -157,6 +157,22 @@ li {
   margin: 5px;
 }
 
+/* ======== Gallery ======== */
+.galleryContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px;
+  color: black;
+  
+}
+.galleryBlock {
+  height: 120px;
+  width: 240px;
+  border: 2px solid salmon;
+}
+
 /* ======== Contact ======== */
 .contactContainer {
   width: 100%;

@@ -6,6 +6,8 @@ import About from './About';
 import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
+import Gallery from './Gallery';
+import Radium, { StyleRoot } from 'radium';
 
 class App extends React.Component {
   constructor(props) {
@@ -47,21 +49,22 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="pageContents">
-        <div className="header">
-          <Logo />
-          <MenuBar />
-          
-            
+      <StyleRoot>
+        <div className="pageContents">
+          <div className="header">
+            <Logo />
+            <MenuBar />  
+          </div>
+          <div className="board">
+            <Cover name={this.state.name} />
+            <About />
+            <Projects list={this.state.projects} />
+            <Gallery />
+            <Contact summitButton={this.summitMessageHandler} />
+            <Footer />
+          </div>
         </div>
-        <div className="board">
-          <Cover name={this.state.name} />
-          <About />
-          <Projects list={this.state.projects} />
-          <Contact summitButton={this.summitMessageHandler} />
-          <Footer />
-        </div>
-      </div>
+      </StyleRoot>
     );
   }
 }
