@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Radium, { StyleRoot } from 'radium';
 import MenuBar from './MenuBar';
 import Logo from './Logo';
@@ -9,7 +9,7 @@ import Contact from './Contact';
 import Footer from './Footer';
 import Gallery from './Gallery';
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,7 +23,7 @@ class App extends React.Component {
       }, {
         id: 1,
         name: 'Grayscale - restaurant review service',
-        summary: 'Airbnb replica',
+        summary: 'Open Table reviews component replica',
         description: 'Worked on back-end to ensure scalability for the service and reduce latancy',
         techStack: ['React.js', 'Node.js', 'PostgreSQL'],
       }, {

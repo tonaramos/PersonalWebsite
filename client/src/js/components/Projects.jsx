@@ -30,7 +30,7 @@ export default Projects;
 
 Projects.defaultProps = {
   list: [{
-    id: 0,
+    id: '0',
     name: 'My first project here',
     summary: 'Short description',
     description: 'Full description',
@@ -39,5 +39,11 @@ Projects.defaultProps = {
 };
 
 Projects.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
+  list: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    summary: PropTypes.string,
+    description: PropTypes.string,
+    techStack: PropTypes.arrayOf(PropTypes.string),
+  })),
 };
