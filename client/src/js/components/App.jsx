@@ -1,4 +1,5 @@
 import React from 'react';
+import Radium, { StyleRoot } from 'radium';
 import MenuBar from './MenuBar';
 import Logo from './Logo';
 import Cover from './Cover';
@@ -7,7 +8,6 @@ import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
 import Gallery from './Gallery';
-import Radium, { StyleRoot } from 'radium';
 
 class App extends React.Component {
   constructor(props) {
@@ -38,9 +38,9 @@ class App extends React.Component {
     this.nameChangeHandler = this.nameChangeHandler.bind(this);
   }
 
-  summitMessageHandler (info) {
-   console.log('the button was clicked!');
-   console.log('the info received', info);
+  summitMessageHandler(info) {
+    console.log('the button was clicked!');
+    console.log('the info received', info);
   }
 
   nameChangeHandler(event) {
@@ -53,7 +53,7 @@ class App extends React.Component {
         <div className="pageContents">
           <div className="header">
             <Logo />
-            <MenuBar />  
+            <MenuBar />
           </div>
           <div className="board">
             <Cover name={this.state.name} />

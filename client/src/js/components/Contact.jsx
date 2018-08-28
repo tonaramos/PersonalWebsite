@@ -149,8 +149,8 @@ class Contact extends React.Component {
   }
 }
 
-export default Contact;
-
 Contact.propTypes = {
   summitButton: PropTypes.func.isRequired,
 };
+
+export default Contact;

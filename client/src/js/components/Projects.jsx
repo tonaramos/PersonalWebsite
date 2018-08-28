@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 function Projects({ list }) {
   const listOfProjects = list.map(project => (
@@ -28,6 +28,16 @@ function Projects({ list }) {
 
 export default Projects;
 
-// Projects.propTypes = {
-//   list: any,
-// };
+Projects.defaultProps = {
+  list: [{
+    id: 0,
+    name: 'My first project here',
+    summary: 'Short description',
+    description: 'Full description',
+    techStack: ['Javascript'],
+  }],
+};
+
+Projects.propTypes = {
+  list: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
+};
