@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Radium, { StyleRoot } from 'radium';
 import MenuBar from './MenuBar';
 import Logo from './Logo';
 import Cover from './Cover';
@@ -49,22 +48,20 @@ class App extends Component {
 
   render() {
     return (
-      <StyleRoot>
-        <div className="pageContents">
-          <div className="header">
-            <Logo />
-            <MenuBar />
-          </div>
-          <div className="board">
-            <Cover name={this.state.name} />
-            <About />
-            <Projects list={this.state.projects} />
-            <Gallery />
-            <Contact summitButton={this.summitMessageHandler} />
-            <Footer />
-          </div>
+      <div className="pageContents">
+        <div className="header">
+          <Logo />
+          <MenuBar />
         </div>
-      </StyleRoot>
+        <div className="board">
+          <Cover name={this.state.name} />
+          <About />
+          <Projects list={this.state.projects} />
+          <Gallery />
+          <Contact summitButton={this.summitMessageHandler} />
+          <Footer />
+        </div>
+      </div>
     );
   }
 }
