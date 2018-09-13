@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
-import MenuBar from './MenuBar';
-import Logo from './Logo';
-import Cover from './Cover';
-import About from './About';
-import Projects from './Projects';
-import Contact from './Contact';
-import Footer from './Footer';
-import Gallery from './Gallery';
+import './App.css';
+import MenuBar from './components/MenuBar';
+import Logo from './components/Logo';
+import Cover from './components/Cover';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import Gallery from './components/Gallery';
+import Builder from './components/Builder';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'none',
+      name: 'Tona',
       projects: [{
         id: 0,
         name: 'Napbnb - Property listing',
@@ -55,6 +57,7 @@ class App extends Component {
         </div>
         <div className="board">
           <Cover name={this.state.name} />
+          <Builder />
           <About />
           <Projects list={this.state.projects} />
           <Gallery />
