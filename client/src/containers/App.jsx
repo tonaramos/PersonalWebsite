@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Layout from '../components/Layout/Layout';
 import MenuBar from '../components/MenuBar';
 import Logo from '../components/Logo';
 import Cover from '../components/Cover';
@@ -8,7 +9,7 @@ import Projects from './Projects';
 import Contact from './Contact';
 import Footer from '../components/Footer';
 import Gallery from './Gallery';
-import Builder from './Builder';
+import Builder from './Builder/Builder';
 
 class App extends Component {
   constructor(props) {
@@ -40,7 +41,7 @@ class App extends Component {
   }
 
   summitMessageHandler(info) {
-    console.log('the button was clicked!');
+    console.log('the button was clicked!', this.name);
     console.log('the info received', info);
   }
 
@@ -51,21 +52,23 @@ class App extends Component {
   render() {
     const { name, projects } = this.state;
     return (
-      <div className="pageContents">
-        <div className="header">
-          <Logo />
-          <MenuBar />
+      <Layout>
+        <div className="pageContents">
+          <div className="header">
+            <Logo />
+            <MenuBar />
+          </div>
+          <div className="board">
+            <Cover name={name} />
+            <Builder />
+            <About />
+            <Projects list={projects} />
+            <Gallery />
+            <Contact summitButton={this.summitMessageHandler} />
+            <Footer />
+          </div>
         </div>
-        <div className="board">
-          <Cover name={name} />
-          <Builder />
-          <About />
-          <Projects list={projects} />
-          <Gallery />
-          <Contact summitButton={this.summitMessageHandler} />
-          <Footer />
-        </div>
-      </div>
+      </Layout>
     );
   }
 }
