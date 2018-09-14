@@ -28,25 +28,28 @@ class Contact extends React.Component {
   /* Information validator activated on input change or on unBlur for each input
     and on button click. Does not assign false to state only true or null. */
   informationValidator() {
-    if (this.state.name.slice().length >= 2) {
+    const {
+      name, email, message, validName, validEmail, validMessage,
+    } = this.state;
+    if (name.slice().length >= 2) {
       this.setState({ validName: true });
     } else {
       this.setState({ validName: null });
     }
 
-    if (this.state.email.length >= 4 && this.state.email.includes('@') && this.state.email.includes('.')) {
+    if (email.length >= 4 && email.includes('@') && email.includes('.')) {
       this.setState({ validEmail: true });
     } else {
       this.setState({ validEmail: null });
     }
 
-    if (this.state.message.length >= 4) {
+    if (message.length >= 4) {
       this.setState({ validMessage: true });
     } else {
       this.setState({ validMessage: null });
     }
 
-    if (this.state.validName && this.state.validEmail && this.state.validMessage) {
+    if (validName && validEmail && validMessage) {
       this.setState({ formCompleted: true });
     } else {
       this.setState({ formCompleted: false });
@@ -56,17 +59,25 @@ class Contact extends React.Component {
   /* Submit Information activated on button clicked.
     Sets validEntry to false to display warning when validation fails. */
   submitInformation() {
-    if (!this.state.validName) {
+    const {
+      validName,
+      validEmail,
+      validMessage,
+      formCompleted,
+    } = this.state;
+    const { summitButton } = this.props;
+
+    if (!validName) {
       this.setState({ validName: false });
     }
-    if (!this.state.validEmail) {
+    if (!validEmail) {
       this.setState({ validEmail: false });
     }
-    if (!this.state.validMessage) {
+    if (!validMessage) {
       this.setState({ validMessage: false });
     }
-    if (this.state.formCompleted) {
-      this.props.summitButton(this.state);
+    if (formCompleted) {
+      summitButton(this.state);
       this.clearForm();
     }
   }
@@ -88,13 +99,21 @@ class Contact extends React.Component {
     const nameStyle = [];
     const emailStyle = [];
     const messageStyle = [];
-    if (this.state.validName === false) {
+    const {
+      name,
+      email,
+      message,
+      validName,
+      validEmail,
+      validMessage,
+    } = this.state;
+    if (validName === false) {
       nameStyle.push('redBackground');
     }
-    if (this.state.validEmail === false) {
+    if (validEmail === false) {
       emailStyle.push('redBackground');
     }
-    if (this.state.validMessage === false) {
+    if (validMessage === false) {
       messageStyle.push('redBackground');
     }
 
@@ -126,18 +145,18 @@ class Contact extends React.Component {
           <div className="lables">
             <label htmlFor="name">
               Name
-              <input id="name" className={nameStyle} type="text" value={this.state.name} onChange={this.onChangeHandler} onBlur={this.informationValidator} />
-              {this.state.validName === false ? nameWarning : null}
+              <input id="name" className={nameStyle} type="text" value={name} onChange={this.onChangeHandler} onBlur={this.informationValidator} />
+              {validName === false ? nameWarning : null}
             </label>
             <label htmlFor="email">
               Email
-              <input id="email" className={emailStyle} type="text" value={this.state.email} onChange={this.onChangeHandler} onBlur={this.informationValidator} />
-              {this.state.validEmail === false ? emailWarning : null}
+              <input id="email" className={emailStyle} type="text" value={email} onChange={this.onChangeHandler} onBlur={this.informationValidator} />
+              {validEmail === false ? emailWarning : null}
             </label>
             <label htmlFor="message">
               Message
-              <input id="message" className={messageStyle} type="text" value={this.state.message} onChange={this.onChangeHandler} onBlur={this.informationValidator} />
-              {this.state.validMessage === false ? messageWarning : null}
+              <input id="message" className={messageStyle} type="text" value={message} onChange={this.onChangeHandler} onBlur={this.informationValidator} />
+              {validMessage === false ? messageWarning : null}
             </label>
           </div>
           <button type="button" onFocus={this.informationValidator} onClick={this.submitInformation}>

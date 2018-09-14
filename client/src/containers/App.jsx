@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import MenuBar from './components/MenuBar';
-import Logo from './components/Logo';
-import Cover from './components/Cover';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Gallery from './components/Gallery';
-import Builder from './components/Builder';
+import MenuBar from '../components/MenuBar';
+import Logo from '../components/Logo';
+import Cover from '../components/Cover';
+import About from '../components/About';
+import Projects from './Projects';
+import Contact from './Contact';
+import Footer from '../components/Footer';
+import Gallery from './Gallery';
+import Builder from './Builder';
 
 class App extends Component {
   constructor(props) {
@@ -49,6 +49,7 @@ class App extends Component {
   }
 
   render() {
+    const { name, projects } = this.state;
     return (
       <div className="pageContents">
         <div className="header">
@@ -56,10 +57,10 @@ class App extends Component {
           <MenuBar />
         </div>
         <div className="board">
-          <Cover name={this.state.name} />
+          <Cover name={name} />
           <Builder />
           <About />
-          <Projects list={this.state.projects} />
+          <Projects list={projects} />
           <Gallery />
           <Contact summitButton={this.summitMessageHandler} />
           <Footer />

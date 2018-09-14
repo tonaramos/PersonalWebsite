@@ -8,6 +8,6 @@ class Builder extends Component {
       </div>
     );
   }
-};
+}
 
 export default Builder;
