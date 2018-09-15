@@ -21,7 +21,22 @@ class Builder extends Component {
         meat: 0,
       },
       totalPrice: 4,
+      purchaseable: false,
     };
+    this.addIngredientHandler = this.addIngredientHandler.bind(this);
+    this.removeIngredientHandler = this.removeIngredientHandler.bind(this);
+    this.updatePurchaseable = this.updatePurchaseable.bind(this);
+  }
+
+  updatePurchaseable(ingredients) {
+    const totalItems = Object.keys(ingredients)
+      .map((igKey) => {
+        return ingredients[igKey];
+      })
+      .reduce((sum, el) => {
+        return sum + el;
+      }, 0);
+    this.setState({ purchaseable: totalItems > 0 });
   }
 
   addIngredientHandler(type) {
@@ -34,19 +49,46 @@ class Builder extends Component {
     const priceAddition = INGREDIENT_PRICES[type];
     const newPrice = totalPrice + priceAddition;
     this.setState({ totalPrice: newPrice, ingredients: updatedIngredients });
+    this.updatePurchaseable(updatedIngredients);
   }
 
+  removeIngredientHandler(type) {
+    const { ingredients, totalPrice } = this.state;
+    const oldCount = ingredients[type];
+    if (oldCount <= 0) {
+      return;
+    }
+    const updatedCount = ingredients[type] - 1;
+    const updatedIngredients = {
+      ...ingredients,
+    };
+    updatedIngredients[type] = updatedCount;
+    const priceSubtraction = INGREDIENT_PRICES[type];
+    const newPrice = totalPrice - priceSubtraction;
+    this.setState({ totalPrice: newPrice, ingredients: updatedIngredients });
+    this.updatePurchaseable(updatedIngredients);
+  }
 
   render() {
-    const { ingredients } = this.state;
+    const { ingredients, totalPrice, purchaseable } = this.state;
+    const disabledInfo = {
+      ...ingredients,
+    };
+    Object.keys(disabledInfo).map((key) => {
+      disabledInfo[key] = disabledInfo[key] <= 0;
+      return null;
+    });
+
     return (
       <Aux>
-        <div>
-          <Burger ingredients={ingredients} />
-        </div>
-        <div>
-          <BuildControls ingredientAdded={this.addIngredientHandler}/>
-        </div>
+        <Burger ingredients={ingredients} />
+        <BuildControls
+          ingredientAdded={this.addIngredientHandler}
+          ingredientRemoved={this.removeIngredientHandler}
+          disabled={disabledInfo}
+          totalPrice={totalPrice}
+          purchaseable={purchaseable}
+        />
       </Aux>
     );
   }
