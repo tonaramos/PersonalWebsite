@@ -24,20 +24,22 @@ class Builder extends Component {
       },
       totalPrice: 4,
       purchaseable: false,
+      purchasing: false,
     };
     this.addIngredientHandler = this.addIngredientHandler.bind(this);
     this.removeIngredientHandler = this.removeIngredientHandler.bind(this);
     this.updatePurchaseable = this.updatePurchaseable.bind(this);
+    this.purchasingHandler = this.purchasingHandler.bind(this);
+  }
+
+  purchasingHandler() {
+    this.setState({ purchasing: true });
   }
 
   updatePurchaseable(ingredients) {
     const totalItems = Object.keys(ingredients)
-      .map((igKey) => {
-        return ingredients[igKey];
-      })
-      .reduce((sum, el) => {
-        return sum + el;
-      }, 0);
+      .map(igKey => ingredients[igKey])
+      .reduce((sum, el) => sum + el, 0);
     this.setState({ purchaseable: totalItems > 0 });
   }
 
@@ -72,7 +74,13 @@ class Builder extends Component {
   }
 
   render() {
-    const { ingredients, totalPrice, purchaseable } = this.state;
+    const {
+      ingredients,
+      totalPrice,
+      purchaseable,
+      purchasing,
+    } = this.state;
+
     const disabledInfo = {
       ...ingredients,
     };
@@ -83,8 +91,8 @@ class Builder extends Component {
 
     return (
       <Aux>
-        <Modal>
-          <OrderSummary ingredients={this.state.ingredients} />
+        <Modal show={purchasing}>
+          <OrderSummary ingredients={ingredients} />
         </Modal>
         <Burger ingredients={ingredients} />
         <BuildControls
@@ -93,6 +101,7 @@ class Builder extends Component {
           disabled={disabledInfo}
           totalPrice={totalPrice}
           purchaseable={purchaseable}
+          ordered={this.purchasingHandler}
         />
       </Aux>
     );
