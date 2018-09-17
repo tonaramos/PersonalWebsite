@@ -9,7 +9,6 @@ import Projects from './Projects';
 import Contact from './Contact';
 import Footer from '../components/Footer';
 import Gallery from './Gallery';
-import Builder from './Builder/Builder';
 
 class App extends Component {
   constructor(props) {
@@ -60,7 +59,6 @@ class App extends Component {
           </div>
           <div className="board">
             <Cover name={name} />
-            <Builder />
             <About />
             <Projects list={projects} />
             <Gallery />
