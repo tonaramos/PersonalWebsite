@@ -4,11 +4,12 @@
     position: fixed;
     top:0;
     left: 0;
-    background-color: #703B09;
+    background-color: rgba(71, 137, 190, 0.651);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 0 20px;
+    padding-right: 15%;
     box-sizing: border-box;  
     z-index: 90;
   }
@@ -17,12 +18,11 @@
     height: 100%;
   }
   
-  .Logo {
-    height: 80%;
-  }
-  
   @media (max-width: 499px) {
     .DesktopOnly {
       display: none;
+    }
+    .MenuBar {
+      justify-content: space-around
     }
   }

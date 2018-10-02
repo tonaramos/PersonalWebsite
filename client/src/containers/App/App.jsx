@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Layout from '../../hoc/Layout/Layout';
-import Logo from '../../components/Logo/Logo';
 import Cover from '../../components/Cover/Cover';
 import About from '../../components/About/About';
 import Projects from '../Projects/Projects';
@@ -53,7 +52,6 @@ class App extends Component {
       <Layout>
         <div className="pageContents">
           <div className="header">
-            <Logo />
           </div>
           <div className="board">
             <Cover name={name} />
