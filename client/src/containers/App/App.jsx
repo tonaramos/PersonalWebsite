@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Layout from '../../hoc/Layout/Layout';
-import MenuBar from '../../components/MenuBar/MenuBar';
 import Logo from '../../components/Logo/Logo';
 import Cover from '../../components/Cover/Cover';
-import Segment from '../../hoc/Segment/Segment';
 import About from '../../components/About/About';
 import Projects from '../Projects/Projects';
 import Contact from '../Contact/Contact';
@@ -56,7 +54,6 @@ class App extends Component {
         <div className="pageContents">
           <div className="header">
             <Logo />
-            <MenuBar />
           </div>
           <div className="board">
             <Cover name={name} />
