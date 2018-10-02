@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import Layout from '../components/Layout/Layout';
-import MenuBar from '../components/MenuBar';
-import Logo from '../components/Logo';
-import Cover from '../components/Cover';
-import About from '../components/About';
-import Projects from './Projects';
-import Contact from './Contact';
-import Footer from '../components/Footer';
-import Gallery from './Gallery';
+import Layout from '../../hoc/Layout/Layout';
+import MenuBar from '../../components/MenuBar/MenuBar';
+import Logo from '../../components/Logo/Logo';
+import Cover from '../../components/Cover/Cover';
+import About from '../../components/About/About';
+import Projects from '../Projects/Projects';
+import Contact from '../Contact/Contact';
+import Footer from '../../components/Footer/Footer';
+import Gallery from '../Gallery/Gallery';
 
 class App extends Component {
   constructor(props) {
