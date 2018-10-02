@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Segment from '../../hoc/Segment/Segment';
 
 function Projects({ list }) {
   const listOfProjects = list.map(project => (
@@ -19,10 +20,12 @@ function Projects({ list }) {
     </div>
   ));
   return (
-    <div className="projects">
-      This is the Projects Section
-      {listOfProjects}
-    </div>
+    <Segment>
+      <div className="projects">
+        This is the Projects Section
+        {listOfProjects}
+      </div>
+    </Segment>
   );
 }
 

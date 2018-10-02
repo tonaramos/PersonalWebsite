@@ -1,0 +1,13 @@
+.Segment {
+    min-height: 100vh;
+    border: 1px solid black;
+    padding: 50px;
+}
+
+/* Minimum height */ 
+
+@media (max-height: 400px) {
+    .Segment {
+        min-height: 400px;
+    }
+}

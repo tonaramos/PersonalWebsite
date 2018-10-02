@@ -1,10 +1,13 @@
 import React from 'react';
+import Segment from '../../hoc/Segment/Segment';
 
 function About() {
   return (
-    <div className="about">
-      {/* <span>Hello,<span> */}
-    </div>
+    <Segment>
+      <div className="about">
+        Hello this is the About section
+      </div>
+    </Segment>
   );
 }
 

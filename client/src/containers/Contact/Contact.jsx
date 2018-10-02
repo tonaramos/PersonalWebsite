@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Segment from '../../hoc/Segment/Segment';
 
 class Contact extends React.Component {
   constructor(props) {
@@ -134,36 +135,38 @@ class Contact extends React.Component {
     );
 
     return (
-      <div className="contactContainer">
-        <h1>
-          Contact
-        </h1>
-        <form className="formArea">
-          <fieldset>
-            Contact Form
-          </fieldset>
-          <div className="lables">
-            <label htmlFor="name">
-              Name
-              <input id="name" className={nameStyle} type="text" value={name} onChange={this.onChangeHandler} onBlur={this.informationValidator} />
-              {validName === false ? nameWarning : null}
-            </label>
-            <label htmlFor="email">
-              Email
-              <input id="email" className={emailStyle} type="text" value={email} onChange={this.onChangeHandler} onBlur={this.informationValidator} />
-              {validEmail === false ? emailWarning : null}
-            </label>
-            <label htmlFor="message">
-              Message
-              <input id="message" className={messageStyle} type="text" value={message} onChange={this.onChangeHandler} onBlur={this.informationValidator} />
-              {validMessage === false ? messageWarning : null}
-            </label>
-          </div>
-          <button type="button" onFocus={this.informationValidator} onClick={this.submitInformation}>
-            Send!
-          </button>
-        </form>
-      </div>
+      <Segment>
+        <div className="contactContainer">
+          <h1>
+            Contact
+          </h1>
+          <form className="formArea">
+            <fieldset>
+              Contact Form
+            </fieldset>
+            <div className="lables">
+              <label htmlFor="name">
+                Name
+                <input id="name" className={nameStyle} type="text" value={name} onChange={this.onChangeHandler} onBlur={this.informationValidator} />
+                {validName === false ? nameWarning : null}
+              </label>
+              <label htmlFor="email">
+                Email
+                <input id="email" className={emailStyle} type="text" value={email} onChange={this.onChangeHandler} onBlur={this.informationValidator} />
+                {validEmail === false ? emailWarning : null}
+              </label>
+              <label htmlFor="message">
+                Message
+                <input id="message" className={messageStyle} type="text" value={message} onChange={this.onChangeHandler} onBlur={this.informationValidator} />
+                {validMessage === false ? messageWarning : null}
+              </label>
+            </div>
+            <button type="button" onFocus={this.informationValidator} onClick={this.submitInformation}>
+              Send!
+            </button>
+          </form>
+        </div>
+        </Segment>
     );
   }
 }
