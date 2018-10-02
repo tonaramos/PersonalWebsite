@@ -2,15 +2,15 @@ import React from 'react';
 import classes from './MenuBar.css';
 import Logo from '../../../components/Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
-// import DrawerToggle from '../SideDrawer/DrawerToggle/DrawerToggle';
-// import drawerToggle from '../SideDrawer/DrawerToggle/DrawerToggle';
+import DrawerToggle from '../SideDrawer/DrawerToggle/DrawerToggle';
+
 
 const menuBar = props => {
   const { drawerToggleClicked } = props;
   return (
     <header className={classes.MenuBar}>
     <Logo />
-      {/* <DrawerToggle clicked={drawerToggleClicked} /> */}
+      <DrawerToggle clicked={drawerToggleClicked} />
       <nav className={classes.DesktopOnly}>
         <NavigationItems />
       </nav>

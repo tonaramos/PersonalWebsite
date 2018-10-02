@@ -23,6 +23,7 @@
       display: none;
     }
     .MenuBar {
-      justify-content: space-around
+      padding: 0px 20px;
+      justify-content: space-between;
     }
   }
