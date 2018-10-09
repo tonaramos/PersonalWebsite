@@ -4,11 +4,12 @@ import classes from './Backdrop.css';
 
 const backdrop = (props) => {
   const { show, clicked } = props;
-  return show ? <div className={classes.Backdrop} onClick={clicked} /> : null;
+  return show ? <div className={classes.Backdrop} onClick={clicked} role="button" /> : null;
 };
 
 backdrop.propTypes = {
   show: PropTypes.bool.isRequired,
+  clicked: PropTypes.func.isRequired,
 };
 
 export default backdrop;

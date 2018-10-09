@@ -51,8 +51,6 @@ class App extends Component {
     return (
       <Layout>
         <div className="pageContents">
-          <div className="header">
-          </div>
           <div className="board">
             <Cover name={name} />
             <About />

@@ -2,23 +2,23 @@ import React from 'react';
 import classes from './NavigationItems.css';
 import NavigationItem from './NavigationItem/NavigationItem';
 
-//  link='/'   for each navigation item was deleted. Need to be reinstated. 
+//  link='/'   for each navigation item was deleted. Need to be reinstated.
 
 const navigationItems = () => (
   <ul className={classes.NavigationItems}>
-    <NavigationItem  active >
+    <NavigationItem active>
       Home
     </NavigationItem>
-    <NavigationItem > 
+    <NavigationItem>
       Projects
     </NavigationItem>
-    <NavigationItem >
+    <NavigationItem>
       About
     </NavigationItem>
-    <NavigationItem >
+    <NavigationItem>
       Gallery
     </NavigationItem>
-    <NavigationItem >
+    <NavigationItem>
       Contact
     </NavigationItem>
   </ul>

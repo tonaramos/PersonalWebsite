@@ -144,7 +144,7 @@ class Contact extends React.Component {
             <fieldset>
               Contact Form
             </fieldset>
-            <div className="lables">
+            <div className="labels">
               <label htmlFor="name">
                 Name
                 <input id="name" className={nameStyle} type="text" value={name} onChange={this.onChangeHandler} onBlur={this.informationValidator} />
@@ -166,7 +166,7 @@ class Contact extends React.Component {
             </button>
           </form>
         </div>
-        </Segment>
+      </Segment>
     );
   }
 }
