@@ -18,8 +18,6 @@ const navigationItem = (props) => {
 };
 
 navigationItem.propTypes = {
-  active: PropTypes.bool.isRequired,
-  link: PropTypes.string.isRequired,
   children: PropTypes.any.isRequired,
 };
 

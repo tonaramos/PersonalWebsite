@@ -30,7 +30,7 @@ const sideDrawer = (props) => {
 
 sideDrawer.propTypes = {
   closed: PropTypes.func.isRequired,
-  open: PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
 };
 
 export default sideDrawer;

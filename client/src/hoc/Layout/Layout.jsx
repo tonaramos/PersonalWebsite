@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import Aux from '../Aux/Aux';
 import classes from './Layout.css';
 import MenuBar from '../../components/Navigation/MenuBar/MenuBar';
@@ -18,13 +20,16 @@ class Layout extends Component {
 
   sideDrawerCloseHandler() {
     this.setState({ showSideDrawer: false });
-    console.log('at side drawer CLOSE handler in Layout');
+    // console.log('at side drawer CLOSE handler in Layout');
   }
 
   sideDrawerToggleHandler() {
     // const { showSideDrawer } = this.state;
-    console.log('at side drawer TOGGLE handler in Layout');
-    this.setState((prevState) => { showSideDrawer: !prevState.showSideDrawer });
+    // console.log('at side drawer TOGGLE handler in Layout');
+    // console.log('new state for toggle bar', this.state.showSideDrawer);
+    this.setState((prevState) => {
+      return { showSideDrawer: !prevState.showSideDrawer };
+    });
   }
 
 
@@ -45,5 +50,10 @@ class Layout extends Component {
     );
   }
 }
+
+Layout.propTypes = {
+  children: PropTypes.any.isRequired,
+};
+
 
 export default Layout;
