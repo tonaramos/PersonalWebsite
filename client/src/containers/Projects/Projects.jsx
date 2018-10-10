@@ -4,29 +4,10 @@ import PropTypes from 'prop-types';
 import classes from './Projects.css';
 import Segment from '../../hoc/Segment/Segment';
 import Project from './Project/Project';
-// import Aux from '../../hoc/Aux/Aux';
 
 function Projects({ list }) {
-  const listOfProjects = list.map(project => (
-    <div className={classes.Project}>
-      <div className={classes.Image}>
-        Image
-      </div>
-      <div key={project.id} className={classes.Text}>
-        <h1>
-          {project.name}
-        </h1>
-        <h3>
-          {project.summary}
-        </h3>
-        <h4 className={classes.TextDescription}>
-          {project.description}
-        </h4>
-        <h2>
-          {project.techStack}
-        </h2>
-      </div>
-    </div>
+  const listOfProjects = list.map(data => (
+    <Project project={data} key={data.id + data.name} />
   ));
   return (
     <Segment>

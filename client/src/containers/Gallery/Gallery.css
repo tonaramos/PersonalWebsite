@@ -1,0 +1,19 @@
+.Gallery {
+  background-color: #b4ddbf;
+  min-height: 100vh;
+  padding: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+@media (max-width: 750px) {
+  .Gallery {
+    padding: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+  }
+}
