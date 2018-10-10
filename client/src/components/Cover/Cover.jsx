@@ -1,28 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import classes from './Cover.css';
 import Segment from '../../hoc/Segment/Segment';
+import Button from '../UI/Button/Button';
 
 function Cover({ name }) {
   return (
     <Segment>
-      <div className="cover">
-        <div className="coverTextArea">
-          <div className="coverText">
-            <p>
-              {'Hello!'}
-            </p>
-            <p>
-              {`my name is ${name}.`}
-            </p>
-            <p>
-              {'I am a web-developer'}
-            </p>
-          </div>
-        </div>
-        <div className="coverImageContainer">
-          <img alt="COVER PIC OF ME" />
-        </div>
+      <div className={classes.Cover}>
+        <p className={classes.NameTitle}>
+          {`Hey, I'm ${name}!`}
+        </p>
+        <p className={classes.ShortIntro}>
+          {'a full stack software engineer'}
+        </p>
+        <p className={classes.ShortIntro}>
+          {'creating capable websites and tools.'}
+        </p>
+        <Button>
+          {'Say Hello!'}
+        </Button>
       </div>
+
     </Segment>
   );
 }
