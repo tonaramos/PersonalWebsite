@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import classes from './Button.css';
 
 const button = (props) => {
-  const { children, clicked, btnType } = props;
+  const { children, clicked } = props;
   return (
     <button
-      className={[classes.Button, classes[btnType]].join(' ')}
+      className={classes.Button}
       onClick={clicked}
       type="button"
     >
@@ -19,7 +19,6 @@ const button = (props) => {
 button.propTypes = {
   children: PropTypes.any.isRequired,
   clicked: PropTypes.any.isRequired,
-  btnType: PropTypes.any.isRequired,
 };
 
 export default button;

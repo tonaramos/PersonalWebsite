@@ -5,14 +5,17 @@
   outline: none;
   cursor: pointer;
   font: inherit;
-  padding: 10px;
-  margin: 10px;
+  padding: 2px;
+  margin: 0px;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Button:first-of-type {
-  margin-left: 0;
-  padding-left: 0;
+  /* margin-left: 0;
+  padding-left: 0; */
 }
 
 .Success {

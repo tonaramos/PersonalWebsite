@@ -10,7 +10,9 @@ function Gallery() {
   return (
     <Segment>
       <div className={classes.Gallery}>
-        {mosaic}
+        <div className={classes.Frame}>
+          {mosaic}
+        </div>
       </div>
     </Segment>
   );

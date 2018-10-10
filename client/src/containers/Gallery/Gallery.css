@@ -9,6 +9,15 @@
   align-content: center;
 }
 
+.Frame {
+  max-width: 1250px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
 @media (max-width: 750px) {
   .Gallery {
     padding: 0px;

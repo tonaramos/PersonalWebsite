@@ -1,0 +1,151 @@
+.Contact {
+  background-color: #eabad8;
+  min-height: 100vh;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Contact h1 {
+width: 300px;
+display: flex;
+justify-content: center;
+}
+
+.Contact input {
+  font: inherit;
+  font-size: .9em;
+}
+
+.Contact textarea {
+  font: inherit;
+  font-size: .9em;
+}
+
+.Contact p {
+  color: red;
+  font-size: .7em;
+}
+
+.Contact label {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 2px;
+}
+
+.Form {
+  /* background-color: #bb99aec0; */
+  padding: 2%;
+  min-width: 300px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 750px) {
+  .Contact {
+    padding: 5%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.FieldList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  min-width: 250px;
+  padding: 0px 20px 0px 20px;
+}
+
+.Field {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  width: 100%;
+  text-transform: uppercase;
+
+}
+
+@media (min-width:1000px) {
+  .Contact {
+    padding: 50px;
+  }
+
+  .Form {
+    width: 100%;
+    max-width: 1100px;
+  }
+
+  .FieldList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 25px 0px 25px;
+  }
+
+  .Field {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    text-transform: uppercase;  
+  }
+}
+
+.MessageField {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.SubmitField {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TextInput {
+  height: 2em;
+  background-color: #ffe2f481;
+  padding-left: 10px;
+  border-width: .5px;
+  border-radius: 3px;
+  border-style: inset
+}
+
+.Asterisk {
+  color: red;
+}
+
+.MessageInput {
+  height: 10em;
+  background-color: #ffe2f481;
+  padding: 10px;
+  border-width: .5px;
+  border-radius: 3px;
+  border-style: inset
+}
+
+.MessageInput textarea {
+  /* grid-row: 6;
+  wrap:  */
+}
+
+.SendButton {
+  background-color: darkcyan;
+  border: solid 1px grey;
+  margin-top: 20px;
+  padding: 5px 15px 5px 15px;
+  display: flex;
+  align-self: center;
+}
+

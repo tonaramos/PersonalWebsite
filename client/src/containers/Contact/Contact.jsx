@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classes from './Contact.css';
 import Segment from '../../hoc/Segment/Segment';
+import Button from '../../components/UI/Button/Button';
 
 class Contact extends React.Component {
   constructor(props) {
@@ -136,35 +138,92 @@ class Contact extends React.Component {
 
     return (
       <Segment>
-        <div className="contactContainer">
+        <div className={classes.Contact}>
           <h1>
-            Contact
+            Get in touch!
           </h1>
-          <form className="formArea">
-            <fieldset>
-              Contact Form
-            </fieldset>
-            <div className="labels">
-              <label htmlFor="name">
-                Name
-                <input id="name" className={nameStyle} type="text" value={name} onChange={this.onChangeHandler} onBlur={this.informationValidator} />
+          <div className={classes.Form}>
+            <form className={classes.FieldList}>
+              <div className={classes.Field}>
+                <label htmlFor="name">
+                  Name
+                  <span className={classes.Asterisk}>
+                  *
+                </span>
+                </label>
+                <input
+                  id="name"
+                  className={classes.TextInput}
+                  type="text"
+                  value={name}
+                  onChange={this.onChangeHandler}
+                  onBlur={this.informationValidator}
+                  wrap="hard"
+                  spellCheck="true"
+                  gramm_editor="true"
+                />
                 {validName === false ? nameWarning : null}
-              </label>
-              <label htmlFor="email">
+              </div>
+              <div className={classes.Field}>
+                <label htmlFor="email">
                 Email
-                <input id="email" className={emailStyle} type="text" value={email} onChange={this.onChangeHandler} onBlur={this.informationValidator} />
+                  <span className={classes.Asterisk}>
+                  *
+                </span>
+                </label>
+                <input
+                  required
+                  id="email"
+                  className={classes.TextInput}
+                  type="email"
+                  title="someEmailIsTheTitle"
+                  value={email}
+                  onChange={this.onChangeHandler}
+                  onBlur={this.informationValidator}
+                  wrap="hard"
+                  spellCheck="true"
+                  gramm_editor="true"
+                />
                 {validEmail === false ? emailWarning : null}
-              </label>
-              <label htmlFor="message">
+              </div>
+            </form>
+            <form className={classes.FieldList}>
+              <div className={classes.MessageField}>
+                <label htmlFor="message">
                 Message
-                <input id="message" className={messageStyle} type="text" value={message} onChange={this.onChangeHandler} onBlur={this.informationValidator} />
+                  <span className={classes.Asterisk}>
+                  *
+                </span>
+                </label>
+                <textarea
+                  id="message"
+                  className={classes.MessageInput}
+                  type="text"
+                  value={message}
+                  onChange={this.onChangeHandler}
+                  onBlur={this.informationValidator}
+                  rows="6"
+                  wrap="hard"
+                  spellCheck="true"
+                  gramm_editor="true"
+                />
                 {validMessage === false ? messageWarning : null}
-              </label>
-            </div>
-            <button type="button" onFocus={this.informationValidator} onClick={this.submitInformation}>
-              Send!
-            </button>
-          </form>
+              </div>
+            </form>
+            <form className={classes.SubmitField}>
+              {/* <div className={classes.SubmitField}> */}
+              <Button type="button">
+                <div
+                  className={classes.SendButton}
+                  onFocus={this.informationValidator}
+                  onClick={this.submitInformation}
+                >
+                Send!
+                </div>
+              </Button>
+              {/* </div> */}
+            </form>
+          </div>
         </div>
       </Segment>
     );

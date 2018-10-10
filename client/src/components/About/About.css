@@ -1,15 +1,15 @@
 .About {
   background-color: rgb(255, 187, 0);
   color: rgb(36, 35, 35);
-  /* color: rgb(233, 233, 233); */
   padding: 60px;  
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  min-height: 400px;
-  height: 100vh;
-  box-sizing: border-box;
+  /* align-items: center; */
+  box-sizing: initial;
+  min-height: 100vh;
+  /* height: 100vh; */
+  
 }
 
 /* .NameTitle {
