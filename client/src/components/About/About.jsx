@@ -1,10 +1,11 @@
 import React from 'react';
+import classes from './About.css';
 import Segment from '../../hoc/Segment/Segment';
 
 function About() {
   return (
     <Segment>
-      <div className="about">
+      <div className={classes.About}>
         <h1>
           About Me
         </h1>
@@ -15,7 +16,7 @@ function About() {
         What’s a Tōna
         </h2>
         <p>
-          {'Tonatiuh was one of my given names at birth. In Aztec mythology, Tonatiuh was the fifth sun and the leader of the skies. You have probably seen his image at the center of the Aztec calendar.'}
+          {'Tonatiuh (Pronounced: tone-ah-Tee-you) was one of my given names at birth. In Aztec mythology, Tonatiuh was the fifth sun and the leader of the skies. You have probably seen his image at the center of the Aztec calendar.'}
         </p>
       </div>
     </Segment>

@@ -15,21 +15,21 @@ class App extends Component {
       name: 'Tona',
       projects: [{
         id: 0,
-        name: 'Napbnb - Property listing',
-        summary: 'Airbnb replica',
-        description: 'This was the first project a worked on',
-        techStack: ['ReactJS', 'Node.js', 'MongoDB'],
-      }, {
-        id: 1,
-        name: 'Grayscale - restaurant review service',
-        summary: 'Open Table reviews component replica',
-        description: 'Worked on back-end to ensure scalability for the service and reduce latancy',
+        name: 'DataTable: System design of OpenTable',
+        summary: 'Restaurant Reviews',
+        description: 'Scaled microservice to handle 200rps with 70M records of user data by deploying two EC2 instances and multi-node Cassandra cluster. Load tested with Artillery.io, Loadder.io, and New Relic to analyse response times, and potential bottlenecks. Resulting in restructuring the database tables and adding indexes for faster queries. Reduced initial page load time to 350ms by implementing React server-side rendering and a Redis cache system.',
         techStack: ['React.js', 'Node.js', 'PostgreSQL'],
+      }, {
+        id: 0,
+        name: 'Napbnb - Property listing',
+        summary: 'Description Listing and title Gallery',
+        description: 'Used React.js to developed a single page flexible microservice that displays an interactive image carousel and  description listing of a properties. Created a Mongo database hosted in Mlab that could handle and store the different size of each property information for  thousands of properties.',
+        techStack: ['ReactJS', 'Node.js', 'MongoDB'],
       }, {
         id: 2,
         name: 'T-minus',
         summary: 'Live multiplayer game',
-        description: 'live multiplayer racing game using socket.io ',
+        description: 'Used ReactJS on the client side and NodeJS/Socket.io on server side to create a realtime race course. Used MongoDB to have a registry system of game users, record times, and usage of the game. Created a seamless interface by reducing the number of actions a user needs to take to move between stages with a countdown for login and race stages.',
         techStack: ['React.js', 'Node.js', 'Socket.io'],
       }],
     };
