@@ -1,7 +1,7 @@
 .Segment {
     min-height: 100vh;
     box-sizing: border-box;
-    border: 1px solid black;
+    /* border: 1px solid black;  */
     min-width: 350px;
     width: 100vw;
 }

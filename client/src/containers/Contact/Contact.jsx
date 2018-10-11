@@ -149,7 +149,7 @@ class Contact extends React.Component {
                   Name
                   <span className={classes.Asterisk}>
                   *
-                </span>
+                  </span>
                 </label>
                 <input
                   id="name"
@@ -169,7 +169,7 @@ class Contact extends React.Component {
                 Email
                   <span className={classes.Asterisk}>
                   *
-                </span>
+                  </span>
                 </label>
                 <input
                   required
@@ -193,7 +193,7 @@ class Contact extends React.Component {
                 Message
                   <span className={classes.Asterisk}>
                   *
-                </span>
+                  </span>
                 </label>
                 <textarea
                   id="message"
