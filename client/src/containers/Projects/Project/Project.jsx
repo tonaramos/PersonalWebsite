@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import ScreenPic from '../../../assets/Screen.png';
 import classes from './Project.css';
 // import Aux from '../../hoc/Aux/Aux';
 
@@ -8,21 +8,23 @@ function Project({ project }) {
   return (
     <div className={classes.Project} key={project.id}>
       <div className={classes.Image}>
-        Image
+        <img key="exImg" src={ScreenPic} alt="pic" />
       </div>
-      <div className={classes.Text}>
-        <h1>
-          {project.name}
-        </h1>
-        <h3>
-          {project.summary}
-        </h3>
-        <h4 className={classes.TextDescription}>
-          {project.description}
-        </h4>
-        <h2>
-          {project.techStack}
-        </h2>
+      <div className={classes.ProjectDescription}>
+        <div className={classes.Text}>
+          <h1>
+            {project.name}
+          </h1>
+          <h3>
+            {project.summary}
+          </h3>
+          <h4 className={classes.TextDescription}>
+            {project.description}
+          </h4>
+          <h2>
+            {project.techStack}
+          </h2>
+        </div>
       </div>
     </div>
   );
