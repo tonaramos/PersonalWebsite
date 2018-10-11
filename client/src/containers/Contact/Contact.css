@@ -136,8 +136,7 @@ justify-content: center;
 }
 
 .MessageInput textarea {
-  /* grid-row: 6;
-  wrap:  */
+
 }
 
 .SendButton {
@@ -148,4 +147,3 @@ justify-content: center;
   display: flex;
   align-self: center;
 }
-

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import Layout from '../../hoc/Layout/Layout';
 import Cover from '../../components/Cover/Cover';
 import About from '../../components/About/About';
@@ -40,6 +39,7 @@ class App extends Component {
   summitMessageHandler(info) {
     console.log('the button was clicked!', this.name);
     console.log('the info received', info);
+    alert('Thanks for your message, I\'ll be in touch soon!')
   }
 
   nameChangeHandler(event) {
