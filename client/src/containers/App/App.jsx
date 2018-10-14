@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from '../../axios-messages';
 import Layout from '../../hoc/Layout/Layout';
 import Cover from '../../components/Cover/Cover';
 import About from '../../components/About/About';
@@ -7,10 +8,12 @@ import Contact from '../Contact/Contact';
 import Footer from '../../components/Footer/Footer';
 import Gallery from '../Gallery/Gallery';
 
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      loading: false,
       name: 'Tona',
       projects: [{
         id: 0,
@@ -37,9 +40,25 @@ class App extends Component {
   }
 
   summitMessageHandler(info) {
-    console.log('the button was clicked!', this.name);
-    console.log('the info received', info);
-    alert('Thanks for your message, I\'ll be in touch soon!')
+    const { loading } = this.state;
+    // alert('Thanks for your message, I\'ll be in touch soon!')
+
+    // this.setState({ loading: true });
+
+    // const message = info;
+    axios.post('/message.json', info)
+      .then((response) => {
+        console.log(response);
+        // this.setState({
+        //   loading: false,
+        // });
+      })
+      .catch((error) => {
+        console.log(error);
+        // this.setState({
+        //   loading: false,
+        // });
+      });
   }
 
   nameChangeHandler(event) {
