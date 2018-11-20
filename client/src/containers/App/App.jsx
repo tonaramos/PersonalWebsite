@@ -7,7 +7,7 @@ import Projects from '../Projects/Projects';
 import Contact from '../Contact/Contact';
 import Footer from '../../components/Footer/Footer';
 import Gallery from '../Gallery/Gallery';
-
+import Backdrop from '../../components/Backdrop/Backdrop';
 
 class App extends Component {
   constructor(props) {
@@ -71,6 +71,7 @@ class App extends Component {
       <Layout>
         <div className="pageContents">
           <div className="board">
+            <Backdrop />
             <Cover name={name} />
             <About />
             <Projects list={projects} />

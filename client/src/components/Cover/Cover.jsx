@@ -4,18 +4,12 @@ import classes from './Cover.css';
 import Segment from '../../hoc/Segment/Segment';
 import Button from '../UI/Button/Button';
 
-function Cover({ name }) {
+function Cover() {
   return (
     <Segment>
       <div className={classes.Cover}>
         <p className={classes.NameTitle}>
-          {`Hey, I'm ${name}!`}
-        </p>
-        <p className={classes.ShortIntro}>
-          {'a full stack software engineer'}
-        </p>
-        <p className={classes.ShortIntro}>
-          {'creating capable websites and tools.'}
+          {'Hey, I\'m Tona!'}
         </p>
         <Button>
           {'Say Hello!'}

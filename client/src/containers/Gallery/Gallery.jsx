@@ -3,9 +3,9 @@ import classes from './Gallery.css';
 import Segment from '../../hoc/Segment/Segment';
 // import ScreenPic from '../../assets/Screen.png';
 // import File3 from '../../assets/File3.jpg';
-import GalleryImage from './GalleryImage/GalleryImage';
+// import GalleryImage from './GalleryImage/GalleryImage';
 
-import File1 from '../../assets/file1.png';
+import File1 from '../../assets/File1.png';
 import File2 from '../../assets/File2.jpg';
 import File3 from '../../assets/File3.jpg';
 import File4 from '../../assets/File4.jpg';
