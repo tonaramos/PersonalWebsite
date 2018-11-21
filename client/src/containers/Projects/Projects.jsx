@@ -13,7 +13,9 @@ function Projects({ list }) {
     <Segment>
       <div className={classes.ProjectSection}>
         <div className={classes.SectionTitle}>
-          Projects
+          <div>
+            Projects
+          </div>
         </div>
         <div className={classes.ProjectsList}>
           {listOfProjects}
