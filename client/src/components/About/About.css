@@ -1,6 +1,7 @@
 .About {
   background-color: rgb(255, 187, 0);
-  color: rgb(36, 35, 35);
+  color: rgb(0, 0, 0);
+  text-shadow: 0px 0px .3px rgba(43, 42, 42, 0.2);
   padding: 60px;  
   display: flex;
   flex-direction: column;
@@ -41,6 +42,7 @@
   height: 250px;
   border-radius: 100%;
   object-fit: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 .WhatsATona {
@@ -56,6 +58,7 @@
   height: 150px;
   border-radius: 100%;
   object-fit: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 .TonatiuhImageFrame {

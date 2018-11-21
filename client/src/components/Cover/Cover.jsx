@@ -12,7 +12,7 @@ function Cover() {
           {'Hey, I\'m Tona!'}
         </p>
         <Button>
-          {'Say Hello!'}
+          {'- Say Hello -'}
         </Button>
       </div>
 

@@ -7,14 +7,14 @@ import Project from './Project/Project';
 
 function Projects({ list }) {
   const listOfProjects = list.map(data => (
-    <Project project={data} key={data.id + data.name} />
+    <Project project={data} image={data.image} key={data.id + data.name} />
   ));
   return (
     <Segment>
       <div className={classes.ProjectSection}>
-        <h1>
+        <div className={classes.SectionTitle}>
           Projects
-        </h1>
+        </div>
         <div className={classes.ProjectsList}>
           {listOfProjects}
         </div>
