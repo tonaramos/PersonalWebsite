@@ -7,12 +7,11 @@
   min-height: 100vh;
   padding-left: 20px;
   padding-right: 20px;
-  /* background-color: #005ba9; */
 }
 
 .SectionTitle {
   font-size: 2.5em;
-  font-weight: 500;
+  font-weight: 550;
   color: White;
   display: flex;
   justify-content: center;
@@ -24,12 +23,15 @@
 
 .ProjectsList {
   max-width: 1500px;
-  /* background-color: black;  */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* align-items: flex-end; */
   flex-wrap: wrap;
+}
+
+.ProjectsList :hover {
+  /* Activate for when projects are live and can be linked */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.7); */
 }
 
 @media (min-width: 900px) {

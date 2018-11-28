@@ -1,31 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import ScreenPic from '../../../assets/Screen.png';
 import classes from './Project.css';
-// import Aux from '../../hoc/Aux/Aux';
 
 function Project({ project, image }) {
+  const techIconList = project.techStack.map((item) => {
+    return <img key="exImg" src={item} alt="pic" className={classes.TechIcon} />;
+  });
   return (
     <div className={classes.Project} key={project.id}>
-      {/* <div className={classes.Image}> */}
-      <img key="exImg" src={image} alt="pic" />
-      {/* </div> */}
-      <div className={classes.DescriptionContainer}>
-        {/* <div className={classes.Text}> */}
-        <p>
-          {project.name}
-        </p>
-        <p>
-          {project.summary}
-        </p>
-        <p className={classes.TextDescription}>
-          {project.description}
-        </p>
-        <p>
-          {project.techStack}
-        </p>
+      <div className={classes.Image}>
+        <img key="exImg" src={image} alt="pic" />
       </div>
-      {/* </div> */}
+      <div className={classes.DescriptionContainer}>
+        <div className={classes.Title}>
+          {project.name}
+        </div>
+        <div className={classes.Subtitle}>
+          {project.summary}
+        </div>
+        <div className={classes.Description}>
+          {project.description}
+        </div>
+        <div className={classes.Tech}>
+          {techIconList}
+        </div>
+      </div>
     </div>
   );
 }
