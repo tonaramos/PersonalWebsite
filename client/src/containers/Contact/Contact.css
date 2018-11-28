@@ -1,5 +1,6 @@
 .Contact {
-  background-color: #eabad8;
+  /* background-color: #eabad8; */
+  background: radial-gradient(farthest-corner at 0% 0%, #cc3a00 70%, #4bafce 70%);
   min-height: 100vh;
   padding: 5%;
   display: flex;

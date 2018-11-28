@@ -1,7 +1,9 @@
 .Gallery {
-  background-color: #b4ddbf;
+  /* background: linear-gradient(110deg, #ffffff 70%, #444444 70%);  #b4ddbf,  rgb(134, 189, 89) */
+  /* background: linear-gradient(300deg, #22810a 40%, #0570a1 40%); */
+  background-color: rgb(43, 3, 37);
   min-height: 100vh;
-  padding: 70px;
+  padding: 100px 0 60px 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -10,7 +12,7 @@
 }
 
 .Frame {
-  max-width: 1250px;
+  /* max-width: 1250px; */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -20,21 +22,31 @@
 
 .Frame img {
   /* border: solid 5px red; */
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
-  filter: grayscale(100%)
+  filter: grayscale(100%);
+  /* padding: 50px; */
 }
 
 .Frame img:hover {
   filter: none;
+  filter: brightness(120%)
 }
 
-@media (max-width: 750px) {
+@media (max-width: 900px) { /*750px*/
   .Gallery {
-    padding: 0px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    /* padding: 100px 0 100px 0; */
+    /* padding-top: 50px; */
+    /* padding-bottom: 50px; */
     
+  }
+}
+
+@media (max-width: 1060px) {
+  .Frame img {
+    /* border: solid 5px red; */
+    width: 200px;
+    height: 200px;
   }
 }
