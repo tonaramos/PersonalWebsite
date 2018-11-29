@@ -41,8 +41,8 @@ class App extends Component {
       projects: [{
         id: 0,
         image: FilePOne,
-        name: 'DataTable: System design of OpenTable',
-        summary: 'Restaurant Reviews',
+        name: 'DataTable',
+        summary: 'System design of OpenTable Reviews',
         description: 'Scaled microservice to handle 200rps with 70M records of user data by deploying two EC2 instances and multi-node Cassandra cluster. Load tested with Artillery.io, Loadder.io, and New Relic to analyse response times, and potential bottlenecks. Resulting in restructuring the database tables and adding indexes for faster queries. Reduced initial page load time to 350ms by implementing React server-side rendering and a Redis cache system.',
         techStack: [redisLogo, postgresqlLogo, newRelicLogo, dockerLogo],
       }, {

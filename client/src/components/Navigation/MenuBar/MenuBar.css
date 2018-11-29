@@ -4,7 +4,9 @@
     position: fixed;
     top:0;
     left: 0;
-    background-color: rgba(71, 137, 190, 0.651);
+    /* background-color: rgba(71, 137, 190, 0.651); */
+    /* background-image: linear-gradient(to bottom, rgba(86, 193, 235, 0.575), rgba(119, 215, 253, 0.575), rgba(133, 215, 248, 0.521), transparent); */
+    background-image: linear-gradient(to bottom, #4592b193, rgba(83, 156, 185, 0.575), rgba(140, 176, 190, 0.521), transparent);
     display: flex;
     justify-content: space-around;
     align-items: flex-start;

@@ -3,6 +3,8 @@
   box-sizing: border-box;
   display: block;
   width: 100%;
+  /* text-shadow: 0px 0px 5px rgb(37, 37, 37); */
+  /* text-shadow: 0px 0px 5px rgb(37, 37, 37); */
 }
 .NavigationItem a {
   /* color: #8f5c2c; */
@@ -17,6 +19,7 @@
 .NavigationItem a:active,
 .NavigationItem a.active {
   color: #40A4c8;
+  
 }
 
 @media (min-width: 700px) {
@@ -31,6 +34,7 @@
     height: 100%;
     padding: 16px 10px;
     border-bottom: 4px solid transparent;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   }
   
   .NavigationItem a:hover,
@@ -54,6 +58,8 @@
     height: 100%;
     padding: 16px 5vh;
     border-bottom: 4px solid transparent;
+    /* font-weight: 700; */
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   }
   
   .NavigationItem a:hover,
