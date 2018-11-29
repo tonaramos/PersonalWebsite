@@ -33,7 +33,7 @@
     color: white;
     height: 100%;
     padding: 16px 10px;
-    border-bottom: 4px solid transparent;
+    /* border-bottom: 4px solid transparent; */
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   }
   
@@ -41,7 +41,7 @@
   .NavigationItem a:active,
   .NavigationItem a.active {
     background-color: rgb(7, 64, 110);
-    border-bottom: 4px solid #40A4c8;
+    /* border-bottom: 4px solid #40A4c8; */
     color: white;
   }
 }
@@ -57,7 +57,7 @@
     color: white;
     height: 100%;
     padding: 16px 5vh;
-    border-bottom: 4px solid transparent;
+    /* border-bottom: 4px solid transparent; */
     /* font-weight: 700; */
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   }
@@ -66,7 +66,7 @@
   .NavigationItem a:active,
   .NavigationItem a.active {
     background-color: rgb(7, 64, 110);
-    border-bottom: 4px solid #40A4c8;
+    /* border-bottom: 4px solid #40A4c8; */
     color: white;
   }
 }

@@ -12,6 +12,9 @@ class menuBar extends Component {
     super(props);
     this.state = {
       winHeight: 0,
+      winPosition: 0,
+      winInnerWidth: 0,
+      style: null,
     };
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -25,28 +28,53 @@ class menuBar extends Component {
   }
 
   handleScroll() {
-    const { innerHeight, screenY, scrollY } = window;
-    const { winHeight } = this.state;
+    const { innerHeight, innerWidth, scrollY } = window;
+    const { winHeight, winInnerWidth } = this.state;
     if (innerHeight !== winHeight) {
-      this.setState({
-        winHeight: innerHeight,
-      });
+      this.setState({ winHeight: innerHeight });
     }
-    console.log('scrollY-> ', scrollY);
-    console.log('screenY-> ', screenY);
+    if (winInnerWidth !== innerWidth) {
+      this.setState({ winInnerWidth: innerWidth });
+    }
+    this.setState({ winPosition: scrollY });
+    // console.log('innerWidth-> ', innerWidth);
+    // if ((winInnerWidth < 700) && (backgroundColor !== 'none') && (backgroundImage !== 'none')) {
+    //   this.setState({
+    //     style: {
+    //       backgroundColor: 'none',
+    //       backgroundImage: 'none',
+    //     },
+    //   });
+    // }
+    // if ((winPosition >= winHeight) && (winInnerWidth > 699) && (backgroundColor !== '#40A4c8') && (backgroundImage !== 'none')) {
+    //   style = {
+    //     backgroundColor: '#40A4c8', // '#206DD0', #40A4c8
+    //     backgroundImage: 'none',
+    //   };
+    // }
   }
 
   render() {
-    const { winHeight } = this.state;
+    const { winHeight, winPosition, winInnerWidth } = this.state;
     const { drawerToggleClicked } = this.props;
-    console.log('this is the winHeight --->> ', winHeight);
-    const styleRed = {
-      backgroundColor: 'red',
-      backgroundImage: 'none',
-    };
+    let style = null;
+    if (winInnerWidth < 700) {
+      style = {
+        backgroundColor: 'none',
+        backgroundImage: 'none',
+      };
+    }
+    if ((winPosition >= winHeight) && (winInnerWidth > 699)) {
+      style = {
+        backgroundColor: '#40A4c8', // '#206DD0', #40A4c8
+        backgroundImage: 'none',
+      };
+    }
+    
+    console.log('WinInnerWidth', winInnerWidth, '     Style ==>', style);
 
     return (
-      <header className={classes.MenuBar} style={styleRed}>
+      <header className={classes.MenuBar} style={style}>
         <Logo />
         <DrawerToggle clicked={drawerToggleClicked} />
         <nav className={classes.DesktopOnly}>
