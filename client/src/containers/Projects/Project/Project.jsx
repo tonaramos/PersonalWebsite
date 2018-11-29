@@ -21,8 +21,10 @@ function Project({ project, image }) {
         <div className={classes.Description}>
           {project.description}
         </div>
-        <div className={classes.Tech}>
-          {techIconList}
+        <div className={classes.TechArea}>
+          <div className={classes.Tech}>
+            {techIconList}
+          </div>
         </div>
       </div>
     </div>
