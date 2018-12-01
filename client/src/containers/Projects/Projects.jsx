@@ -11,7 +11,7 @@ function Projects({ list }) {
   ));
   return (
     <Segment>
-      <div className={classes.ProjectSection}>
+      <div id="/Projects" className={classes.ProjectSection}>
         <div className={classes.SectionTitle}>
           <div>
             Projects

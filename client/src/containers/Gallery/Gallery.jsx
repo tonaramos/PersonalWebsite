@@ -50,7 +50,7 @@ function Gallery() {
 
   return (
     <Segment>
-      <div className={classes.Gallery}>
+      <div id="/Gallery" className={classes.Gallery}>
         <div className={classes.Frame}>
           {mosaic}
           <div />

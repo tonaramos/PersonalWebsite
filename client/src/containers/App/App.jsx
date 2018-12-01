@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { NavHashLink as NavLink } from 'react-router-dom';
 import axios from '../../axios-messages';
 import Layout from '../../hoc/Layout/Layout';
 import Cover from '../../components/Cover/Cover';
@@ -59,7 +59,7 @@ class App extends Component {
         image: FilePThree,
         summary: 'Live multiplayer game',
         description: 'Used ReactJS on the client side and NodeJS/Socket.io on server side to create a realtime race course. Used MongoDB to have a registry system of game users, record times, and usage of the game. Created a seamless interface by reducing the number of actions a user needs to take to move between stages with a countdown for login and race stages.',
-        techStack: [ reactLogo, socketioLogo, mongodbLogo, herokuLogo],
+        techStack: [reactLogo, socketioLogo, mongodbLogo, herokuLogo],
       }, {
         id: 3,
         image: BurritoBuilder,
@@ -113,23 +113,21 @@ class App extends Component {
   render() {
     const { name, projects } = this.state;
     window.scroll(0, 500);
+    /* <Route path="/About" component={About} /> */
     return (
-      <BrowserRouter>
-        <Layout>
-          <div className="pageContents">
-            <div className="board">
-              <Backdrop />
-              <Cover name={name} />
-              {/* <Route path="/About" component={About} /> */}
-              <About />
-              <Projects list={projects} />
-              <Gallery />
-              <Contact summitButton={this.summitMessageHandler} />
-              <Footer />
-            </div>
+      <Layout>
+        <div className="pageContents">
+          <div className="board">
+            <Backdrop />
+            <Cover name={name} />
+            <About />
+            <Projects list={projects} />
+            <Gallery />
+            <Contact summitButton={this.summitMessageHandler} />
+            <Footer />
           </div>
-        </Layout>
-      </BrowserRouter>
+        </div>
+      </Layout>
     );
   }
 }

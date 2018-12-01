@@ -1,32 +1,50 @@
 import React from 'react';
-import { NavHashLink as Link } from 'react-router-hash-link';
-
+import { HashLink as Link } from 'react-router-hash-link';
 import classes from './NavigationItems.css';
 import NavigationItem from './NavigationItem/NavigationItem';
 
-//  link='/'   for each navigation item was deleted. Need to be reinstated.
-
 const navigationItems = () => (
   <ul className={classes.NavigationItems}>
-    <NavigationItem active>
-      <Link to="/Home">
+    <Link
+      to="/#/Home"
+      scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
+    >
+      <NavigationItem active>
         Home
+      </NavigationItem>
+    </Link>
+    <NavigationItem>
+      <Link
+        to="/#/About"
+        scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
+      >
+        About
       </Link>
     </NavigationItem>
-    <NavigationItem>
-      <Link smooth to="/Projects">
+    <Link
+      to="/#/Projects"
+      scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
+    >
+      <NavigationItem>
         Projects
-      </Link>
-    </NavigationItem>
-    <NavigationItem>
-      About
-    </NavigationItem>
-    <NavigationItem>
-      Gallery
-    </NavigationItem>
-    <NavigationItem>
-      Contact
-    </NavigationItem>
+      </NavigationItem>
+    </Link>
+    <Link
+      to="/#/Gallery"
+      scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
+    >
+      <NavigationItem>
+        Gallery
+      </NavigationItem>
+    </Link>
+    <Link
+      to="/#/Contact"
+      scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
+    >
+      <NavigationItem>
+        Contact
+      </NavigationItem>
+    </Link>
   </ul>
 );
 

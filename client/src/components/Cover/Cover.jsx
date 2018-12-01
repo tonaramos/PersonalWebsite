@@ -8,7 +8,7 @@ import Button from '../UI/Button/Button';
 function Cover() {
   return (
     <Segment>
-      <div className={classes.Cover}>
+      <div id="/Home" className={classes.Cover}>
         <p className={classes.NameTitle}>
           {'Hey, I\'m Tona!'}
         </p>
