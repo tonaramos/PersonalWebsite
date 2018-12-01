@@ -16,6 +16,48 @@
   text-shadow: 0px 0px 1px rgba(151, 151, 151, 0.3);
 }
 
+@media (max-width: 1350px) {
+  .About {
+    background: linear-gradient(100deg, #45caff 65%, rgb(255, 187, 0, 1) 40%); 
+  } 
+}
+
+@media (max-width: 1200px) {
+  .About {
+    background: linear-gradient(80deg, #45caff 65%, rgb(255, 187, 0, 1) 40%); 
+  } 
+}
+
+/* @media (max-width: 1200px) {
+  .About {
+    background: linear-gradient(-3deg, #45caff 42%, rgb(255, 187, 0, 1) 30%); 
+  } 
+} */
+
+@media (max-width: 1200px) {
+  .About {
+    background: linear-gradient(177.5deg, #45caff 57%, rgb(255, 187, 0, 1) 30%); 
+  } 
+}
+
+@media (max-width: 1000px) {
+  .About {
+    background: linear-gradient(177.5deg, #45caff 62%, rgb(255, 187, 0, 1) 30%); 
+  } 
+}
+
+@media (max-width: 799px) {
+  .About {
+    background: linear-gradient(180deg, #45caff 62%, rgb(255, 187, 0, 1) 30%); 
+  } 
+}
+
+@media (max-width: 599px) {
+  .About {
+    background: linear-gradient(180deg, #45caff 64%, rgb(255, 187, 0, 1) 30%); 
+  } 
+}
+
 @media (max-width: 799px) {
   .About {
     padding: 5%;

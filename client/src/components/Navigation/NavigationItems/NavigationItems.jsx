@@ -1,4 +1,6 @@
 import React from 'react';
+import { NavHashLink as Link } from 'react-router-hash-link';
+
 import classes from './NavigationItems.css';
 import NavigationItem from './NavigationItem/NavigationItem';
 
@@ -7,10 +9,14 @@ import NavigationItem from './NavigationItem/NavigationItem';
 const navigationItems = () => (
   <ul className={classes.NavigationItems}>
     <NavigationItem active>
-      Home
+      <Link to="/Home">
+        Home
+      </Link>
     </NavigationItem>
     <NavigationItem>
-      Projects
+      <Link smooth to="/Projects">
+        Projects
+      </Link>
     </NavigationItem>
     <NavigationItem>
       About

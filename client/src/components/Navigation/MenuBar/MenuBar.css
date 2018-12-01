@@ -27,6 +27,7 @@
     .MenuBar {
       padding: 0px 20px;
       justify-content: space-between;
-      
+      background-image: none;
+      background-color: none;
     }
   }

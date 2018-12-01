@@ -14,7 +14,6 @@ class menuBar extends Component {
       winHeight: 0,
       winPosition: 0,
       winInnerWidth: 0,
-      style: null,
     };
     this.handleScroll = this.handleScroll.bind(this);
   }
@@ -37,41 +36,18 @@ class menuBar extends Component {
       this.setState({ winInnerWidth: innerWidth });
     }
     this.setState({ winPosition: scrollY });
-    // console.log('innerWidth-> ', innerWidth);
-    // if ((winInnerWidth < 700) && (backgroundColor !== 'none') && (backgroundImage !== 'none')) {
-    //   this.setState({
-    //     style: {
-    //       backgroundColor: 'none',
-    //       backgroundImage: 'none',
-    //     },
-    //   });
-    // }
-    // if ((winPosition >= winHeight) && (winInnerWidth > 699) && (backgroundColor !== '#40A4c8') && (backgroundImage !== 'none')) {
-    //   style = {
-    //     backgroundColor: '#40A4c8', // '#206DD0', #40A4c8
-    //     backgroundImage: 'none',
-    //   };
-    // }
   }
 
   render() {
     const { winHeight, winPosition, winInnerWidth } = this.state;
     const { drawerToggleClicked } = this.props;
     let style = null;
-    if (winInnerWidth < 700) {
-      style = {
-        backgroundColor: 'none',
-        backgroundImage: 'none',
-      };
-    }
     if ((winPosition >= winHeight) && (winInnerWidth > 699)) {
       style = {
         backgroundColor: '#40A4c8', // '#206DD0', #40A4c8
         backgroundImage: 'none',
       };
     }
-    
-    console.log('WinInnerWidth', winInnerWidth, '     Style ==>', style);
 
     return (
       <header className={classes.MenuBar} style={style}>

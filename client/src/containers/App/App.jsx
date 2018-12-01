@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import axios from '../../axios-messages';
 import Layout from '../../hoc/Layout/Layout';
 import Cover from '../../components/Cover/Cover';
@@ -79,6 +80,10 @@ class App extends Component {
     this.nameChangeHandler = this.nameChangeHandler.bind(this);
   }
 
+  // componentDidUpdate() {
+  //   ReactDOM.findDOMNode(this).scrollTop = 0;
+  // }
+
   summitMessageHandler(info) {
     const { loading } = this.state;
     // alert('Thanks for your message, I\'ll be in touch soon!')
@@ -107,20 +112,24 @@ class App extends Component {
 
   render() {
     const { name, projects } = this.state;
+    window.scroll(0, 500);
     return (
-      <Layout>
-        <div className="pageContents">
-          <div className="board">
-            <Backdrop />
-            <Cover name={name} />
-            <About />
-            <Projects list={projects} />
-            <Gallery />
-            <Contact summitButton={this.summitMessageHandler} />
-            <Footer />
+      <BrowserRouter>
+        <Layout>
+          <div className="pageContents">
+            <div className="board">
+              <Backdrop />
+              <Cover name={name} />
+              {/* <Route path="/About" component={About} /> */}
+              <About />
+              <Projects list={projects} />
+              <Gallery />
+              <Contact summitButton={this.summitMessageHandler} />
+              <Footer />
+            </div>
           </div>
-        </div>
-      </Layout>
+        </Layout>
+      </BrowserRouter>
     );
   }
 }
