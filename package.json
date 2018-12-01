@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "dev": "webpack -d --watch"
+    "dev": "webpack -d --watch",
+    "start": "node ./server/index.js"
   },
   "repository": {
     "type": "git",
@@ -50,6 +51,8 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
     "prop-types": "^15.6.2",
     "radium": "^0.24.1",
     "react": "^16.4.2",
