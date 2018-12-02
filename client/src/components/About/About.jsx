@@ -8,7 +8,7 @@ import File27 from '../../assets/File27.jpg';
 function About() {
   return (
     <Segment>
-      <div id="/About" className={classes.About}>
+      <div id="About" className={classes.About}>
         <div className={classes.AboutMe}>
           <div className={classes.Text}>
             <h1>

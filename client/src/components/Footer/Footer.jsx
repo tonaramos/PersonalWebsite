@@ -11,7 +11,7 @@ import UpButton from '../../assets/upload.png';
 
 function Footer() {
   return (
-    <div className={classes.Footer}>
+    <div id="More+" className={classes.Footer}>
       <Button>
         <img key="BackToTop" src={UpButton} alt="UpButton" className={classes.SocialMediaIcon} />
       </Button>

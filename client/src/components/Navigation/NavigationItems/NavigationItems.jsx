@@ -1,50 +1,81 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 import classes from './NavigationItems.css';
 import NavigationItem from './NavigationItem/NavigationItem';
 
 const navigationItems = () => (
   <ul className={classes.NavigationItems}>
-    <Link
-      to="/#/Home"
+    <NavLink
+      to={{
+        // pathname: 'Home',
+        hash: 'Home',
+      }}
+      // exact
       scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
     >
-      <NavigationItem active>
+      <NavigationItem>
         Home
       </NavigationItem>
-    </Link>
-    <NavigationItem>
-      <Link
-        to="/#/About"
-        scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
-      >
+    </NavLink>
+    <NavLink
+      to={{
+        // pathname: '',
+        hash: 'About',
+      }}
+      scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
+    >
+      <NavigationItem>
         About
-      </Link>
-    </NavigationItem>
-    <Link
-      to="/#/Projects"
+      </NavigationItem>
+    </NavLink>
+    <NavLink
+      to={{
+        // pathname: '/Projects',
+        hash: 'Projects',
+        // search: '?project-search',
+      }}
+      // exact
       scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
     >
       <NavigationItem>
         Projects
       </NavigationItem>
-    </Link>
-    <Link
-      to="/#/Gallery"
+    </NavLink>
+    <NavLink
+      to={{
+        // pathname: '/Gallery',
+        hash: 'Gallery',
+        // search: '?Gallery-Search',
+      }}
+      // exact
       scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
     >
       <NavigationItem>
         Gallery
       </NavigationItem>
-    </Link>
-    <Link
-      to="/#/Contact"
+    </NavLink>
+    <NavLink
+      to={{
+        // pathname: '/Contact',
+        hash: 'Contact',
+      }}
       scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
     >
       <NavigationItem>
         Contact
       </NavigationItem>
-    </Link>
+    </NavLink>
+    <NavLink
+      to={{
+        // pathname: '/More+',
+        hash: 'More+',
+      }}
+      scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
+    >
+      <NavigationItem>
+        More+
+      </NavigationItem>
+    </NavLink>
   </ul>
 );
 

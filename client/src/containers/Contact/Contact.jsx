@@ -138,7 +138,7 @@ class Contact extends React.Component {
 
     return (
       <Segment>
-        <div id="/Contact" className={classes.Contact}>
+        <div id="Contact" className={classes.Contact}>
           <h1>
             Get in touch!
           </h1>

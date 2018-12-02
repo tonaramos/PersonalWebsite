@@ -41,3 +41,11 @@
       margin-left: -40%;
   }
 }
+
+.Cover a{
+  text-decoration: inherit;
+  font-style: inherit;
+  color: inherit;
+  text-shadow: inherit;
+  font-size: inherit;
+}

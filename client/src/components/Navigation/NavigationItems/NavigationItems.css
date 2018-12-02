@@ -7,9 +7,13 @@
     align-items:  center;
     height: 100%;
   }
-  
-  @media (min-width: 700px) {
-    .NavigationItems {
-      flex-flow: row;
-    }
+
+@media (min-width: 700px) {
+  .NavigationItems {
+    flex-flow: row;
   }
+}
+
+.NavigationItems a:link{
+ text-decoration: none;
+}

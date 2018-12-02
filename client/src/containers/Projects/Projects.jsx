@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Route } from 'react-router-dom';
 
 import classes from './Projects.css';
 import Segment from '../../hoc/Segment/Segment';
@@ -11,7 +12,8 @@ function Projects({ list }) {
   ));
   return (
     <Segment>
-      <div id="/Projects" className={classes.ProjectSection}>
+      <Route path="/Projects" />
+      <div id="Projects" className={classes.ProjectSection}>
         <div className={classes.SectionTitle}>
           <div>
             Projects
