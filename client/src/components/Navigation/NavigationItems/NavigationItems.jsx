@@ -67,13 +67,13 @@ const navigationItems = () => (
     </NavLink>
     <NavLink
       to={{
-        // pathname: '/More+',
-        hash: 'More+',
+        // pathname: '/Más+',
+        hash: 'Más+',
       }}
       scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
     >
       <NavigationItem>
-        More+
+        {'Más+'}
       </NavigationItem>
     </NavLink>
   </ul>

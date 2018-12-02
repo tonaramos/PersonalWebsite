@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 import classes from './Footer.css';
 import Button from '../UI/Button/Button';
 
@@ -11,9 +12,17 @@ import UpButton from '../../assets/upload.png';
 
 function Footer() {
   return (
-    <div id="More+" className={classes.Footer}>
+    <div id="Más+" className={classes.Footer}>
       <Button>
-        <img key="BackToTop" src={UpButton} alt="UpButton" className={classes.SocialMediaIcon} />
+        <NavLink
+          to={{
+            // pathname: '/Home',
+            hash: 'Home',
+          }}
+          scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
+        >
+          <img key="BackToTop" src={UpButton} alt="UpButton" className={classes.SocialMediaIcon} />
+        </NavLink>
       </Button>
       {/* <div className={classes.Text}>
         Build with  love care and tender

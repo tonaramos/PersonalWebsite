@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './About.css';
-import  { HashLink as Link } from 'react-router-hash-link';
 import Segment from '../../hoc/Segment/Segment';
 import File20 from '../../assets/File20.jpg';
 import File27 from '../../assets/File27.jpg';
@@ -30,7 +29,9 @@ function About() {
             </p>
           </div>
           <div className={classes.TonatiuhImageFrame}>
-            <img key="exImg" src={File27} alt="pic" />
+            <a href="https://en.wikipedia.org/wiki/T%C5%8Dnatiuh">
+              <img key="exImg" src={File27} alt="pic" />
+            </a>
           </div>
         </div>
       </div>
