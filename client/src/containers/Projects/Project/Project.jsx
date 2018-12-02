@@ -9,7 +9,9 @@ function Project({ project, image }) {
   return (
     <div className={classes.Project} key={project.id}>
       <div className={classes.Image}>
-        <img key="exImg" src={image} alt="pic" />
+        <a href={project.webAddress} rel="noopener noreferrer" target="_blank">
+          <img key="exImg" src={image} alt="pic" />
+        </a>
       </div>
       <div className={classes.DescriptionContainer}>
         <div className={classes.Title}>

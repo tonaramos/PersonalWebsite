@@ -42,6 +42,7 @@ class App extends Component {
       projects: [{
         id: 0,
         image: FilePOne,
+        webAddress: 'https://www.tonatiuhramos.com',
         name: 'DataTable',
         summary: 'System design of OpenTable Reviews',
         description: 'Scaled microservice to handle 200rps with 70M records of user data by deploying two EC2 instances and multi-node Cassandra cluster. Load tested with Artillery.io, Loadder.io, and New Relic to analyse response times, and potential bottlenecks. Resulting in restructuring the database tables and adding indexes for faster queries. Reduced initial page load time to 350ms by implementing React server-side rendering and a Redis cache system.',
@@ -49,6 +50,7 @@ class App extends Component {
       }, {
         id: 1,
         image: FilePTwo,
+        webAddress: 'https://tonatiuhramos.com',
         name: 'Napbnb',
         summary: 'Property listing and title Gallery',
         description: 'Used React.js to developed a single page flexible microservice that displays an interactive image carousel and  description listing of a properties. Created a Mongo database hosted in Mlab that could handle and store the different size of each property information for  thousands of properties.',
@@ -57,12 +59,14 @@ class App extends Component {
         id: 2,
         name: 'T-minus',
         image: FilePThree,
+        webAddress: 'https://www.tonatiuhramos.com',
         summary: 'Live multiplayer game',
         description: 'Used ReactJS on the client side and NodeJS/Socket.io on server side to create a realtime race course. Used MongoDB to have a registry system of game users, record times, and usage of the game. Created a seamless interface by reducing the number of actions a user needs to take to move between stages with a countdown for login and race stages.',
         techStack: [reactLogo, socketioLogo, mongodbLogo, herokuLogo],
       }, {
         id: 3,
         image: BurritoBuilder,
+        webAddress: 'https://www.tonatiuhramos.com',
         name: 'Burrito Builder',
         summary: 'Online burrito ordering site',
         description: 'Used React.js to developed a single page flexible microservice that displays an interactive image carousel and  description listing of a properties. Created a Mongo database hosted in Mlab that could handle and store the different size of each property information for  thousands of properties.',
@@ -70,6 +74,7 @@ class App extends Component {
       }, {
         id: 3,
         image: HelloWorld,
+        webAddress: 'https://www.tonatiuhramos.com',
         name: 'Personal Website',
         summary: 'Description Listing and title Gallery',
         description: 'Used React.js to developed a single page flexible microservice that displays an interactive image carousel and  description listing of a properties. Created a Mongo database hosted in Mlab that could handle and store the different size of each property information for  thousands of properties.',
