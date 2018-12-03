@@ -1,24 +1,35 @@
+
+/* 
+dark blue=
+background-color: rgb(7, 64, 110);
+
+light blue=
+color: #40A4c8;
+
+other color letter drawer blue=
+color: rgb(30, 144, 236);
+
+best background blue=
+rgb(35, 123, 197)
+ */
+
 .NavigationItem {
   margin: 20px 0;
   box-sizing: border-box;
   display: block;
   width: 100%;
-  /* text-shadow: 0px 0px 5px rgb(37, 37, 37); */
-  /* text-shadow: 0px 0px 5px rgb(37, 37, 37); */
 }
 .NavigationItem a {
-  /* color: #8f5c2c; */
   text-decoration: none;
   width: 100%;
   box-sizing: border-box;
   display: block;
-  /* border: 5px solid red; */
 }
 
 .NavigationItem a:hover,
 .NavigationItem a:active,
 .NavigationItem a.active {
-  color: #40A4c8;
+  color: rgb(7, 64, 110);
   
 }
 
@@ -32,21 +43,25 @@
   .NavigationItem a {
     color: white;
     height: 100%;
-    padding: 16px 10px;
-    /* border-bottom: 4px solid transparent; */
+    padding: 16px 1vh;
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   }
   
   .NavigationItem a:hover,
   .NavigationItem a:active,
   .NavigationItem a.active {
-    background-color: rgb(7, 64, 110);
-    /* border-bottom: 4px solid #40A4c8; */
+    background-color:   rgb(7, 64, 110);
     color: white;
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 880px) {
+  .NavigationItem a {
+    padding: 16px 2.5vh;
+  }
+}
+
+@media (min-width: 1250px) {
   .NavigationItem {
     margin: 0;
     display: flex;
@@ -57,21 +72,18 @@
     color: white;
     height: 100%;
     padding: 16px 5vh;
-    /* border-bottom: 4px solid transparent; */
-    /* font-weight: 700; */
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   }
   
   .NavigationItem a:hover,
   .NavigationItem a:active,
   .NavigationItem a.active {
-    background-color: rgb(7, 64, 110);
-    /* border-bottom: 4px solid #40A4c8; */
+    background-color:  rgb(7, 64, 110);
     color: white;
   }
 }
 
-@media (max-width: 699px) {
+@media (max-width: 824px) {
   .NavigationItem {
     width: 100%;
     padding: 0;
@@ -82,11 +94,9 @@
   }
   .NavigationItem a {
     width: 100%;
-    color: rgb(30, 144, 236);
+    color:  rgb(35, 123, 197);
     height: 100%;
     padding: 16px 5vh;
-    /* border-bottom: 4px solid transparent; */
-    /* font-weight: 700; */
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
   }
   
@@ -94,8 +104,7 @@
   .NavigationItem a:active,
   .NavigationItem a.active {
     width: 100%;
-    background-color: rgb(7, 64, 110);
-    /* border-bottom: 4px solid #40A4c8; */
+    background-color:  rgb(7, 64, 110);
     color: white;
   }
 }

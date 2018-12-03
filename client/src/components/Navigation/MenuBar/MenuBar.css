@@ -20,7 +20,7 @@
     height: 100%;
   }
   
-  @media (max-width: 699px) {
+  @media only screen and (max-width: 824px) { /* it was 699 before*/
     .DesktopOnly {
       display: none;
     }

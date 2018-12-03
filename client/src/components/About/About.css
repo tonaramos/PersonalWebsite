@@ -1,7 +1,16 @@
 .About {
   /* background-color: rgb(255, 187, 0, 1); */
   /* background: linear-gradient(100deg, #a3e1fa 67.5%, rgb(255, 187, 0, 1) 40%);  */
+  top: 0;
+  left: 0;
+  background-color: yellow;
+  background: rgb(255, 187, 0);
   background: linear-gradient(100deg, #45caff 67.5%, rgb(255, 187, 0, 1) 40%); 
+  background: -webkit-linear-gradient(100deg, #45caff 67.5%, rgb(255, 187, 0, 1) 40% );
+  background: -moz-linear-gradient(100deg, #45caff 67.5%, rgb(255, 187, 0, 1) 40%);
+  background: -o-linear-gradient(100deg, #45caff 67.5%, rgb(255, 187, 0, 1) 40%);
+  background: linear-gradient(100deg, #45caff 67.5%, rgb(255, 187, 0, 1) 40%); 
+
   color: rgb(0, 0, 0);
   text-shadow: 0px 0px .3px rgba(43, 42, 42, 0.2);
   padding: 60px;  
@@ -18,12 +27,14 @@
 
 @media (max-width: 1350px) {
   .About {
+    background-color: rgb(255, 187, 0, 1);
     background: linear-gradient(100deg, #45caff 65%, rgb(255, 187, 0, 1) 40%); 
   } 
 }
 
 @media (max-width: 1200px) {
   .About {
+    background-color: rgb(255, 187, 0, 1);
     background: linear-gradient(80deg, #45caff 65%, rgb(255, 187, 0, 1) 40%); 
   } 
 }
@@ -36,24 +47,28 @@
 
 @media (max-width: 1200px) {
   .About {
+    background-color: rgb(255, 187, 0, 1);
     background: linear-gradient(177.5deg, #45caff 57%, rgb(255, 187, 0, 1) 30%); 
   } 
 }
 
 @media (max-width: 1000px) {
   .About {
+    background-color: rgb(255, 187, 0, 1);
     background: linear-gradient(177.5deg, #45caff 62%, rgb(255, 187, 0, 1) 30%); 
   } 
 }
 
 @media (max-width: 799px) {
   .About {
+    background-color: rgb(255, 187, 0, 1);
     background: linear-gradient(180deg, #45caff 62%, rgb(255, 187, 0, 1) 30%); 
   } 
 }
 
 @media (max-width: 599px) {
   .About {
+    background-color: rgb(255, 187, 0, 1);
     background: linear-gradient(180deg, #45caff 64%, rgb(255, 187, 0, 1) 30%); 
   } 
 }

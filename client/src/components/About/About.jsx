@@ -29,7 +29,7 @@ function About() {
             </p>
           </div>
           <div className={classes.TonatiuhImageFrame}>
-            <a href="https://en.wikipedia.org/wiki/T%C5%8Dnatiuh">
+            <a href="https://en.wikipedia.org/wiki/T%C5%8Dnatiuh" rel="noopener noreferrer" target="_blank">
               <img key="exImg" src={File27} alt="pic" />
             </a>
           </div>

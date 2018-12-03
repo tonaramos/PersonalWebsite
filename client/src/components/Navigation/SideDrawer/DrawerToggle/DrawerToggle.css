@@ -20,7 +20,7 @@
     background-color: rgb(71, 71, 71);
   }
   
-  @media (min-width: 700px) {
+  @media (min-width: 825px) { /*was 700 before*/
     .DrawerToggle {
         display: none;
     }

@@ -42,9 +42,9 @@ class menuBar extends Component {
     const { winHeight, winPosition, winInnerWidth } = this.state;
     const { drawerToggleClicked } = this.props;
     let style = null;
-    if ((winPosition >= winHeight) && (winInnerWidth > 699)) {
+    if ((winPosition >= winHeight * 1.18) && (winInnerWidth > 699)) {
       style = {
-        backgroundColor: '#40A4c8', // '#206DD0', #40A4c8
+        backgroundColor: 'rgb(35, 123, 197)', // '#206DD0', #40A4c8
         backgroundImage: 'none',
       };
     }
