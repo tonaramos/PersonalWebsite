@@ -41,17 +41,24 @@ class menuBar extends Component {
   render() {
     const { winHeight, winPosition, winInnerWidth } = this.state;
     const { drawerToggleClicked } = this.props;
+
     let style = null;
-    if ((winPosition >= winHeight * 1.18) && (winInnerWidth > 699)) {
+    if ((winPosition >= winHeight * 1.18) && (winInnerWidth > 824)) {
       style = {
         backgroundColor: 'rgb(35, 123, 197)', // '#206DD0', #40A4c8
         backgroundImage: 'none',
       };
     }
-
+    let insertLogo = null;
+    if (
+      (winInnerWidth < 825 && winInnerWidth > 499)
+      || (winInnerWidth < 825 && winHeight < 499)
+      || (winInnerWidth > 500 && winHeight > 574)) {
+      insertLogo = <Logo />;
+    }
     return (
       <header className={classes.MenuBar} style={style}>
-        <Logo />
+        {insertLogo}
         <DrawerToggle clicked={drawerToggleClicked} />
         <nav className={classes.DesktopOnly}>
           <NavigationItems />
