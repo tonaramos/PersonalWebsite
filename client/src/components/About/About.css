@@ -161,3 +161,13 @@
   }
 }
 
+/* tablet profile large */
+
+@media (min-width: 699px) and (max-width: 1024px) {
+  @media (min-height: 1000px) {
+    .About{
+      padding: 60px;  
+      justify-content: space-around;
+    }
+  }
+}
