@@ -1,4 +1,4 @@
-.GalleryTile {
+/* .GalleryTile {
   width: 200px;
   height: 200px;
   border: solid 1px black;
@@ -14,3 +14,13 @@
 .GalleryTile:hover {
   filter: one;
 }
+
+@media (min-width: 760px) and (max-width: 1024px) {
+  @media (min-height: 1024px) {
+    .GalleryTile{
+      width: 350px;
+      height: 350px;
+      margin: 50px;
+    }
+  }
+} */

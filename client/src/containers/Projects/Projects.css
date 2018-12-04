@@ -31,9 +31,10 @@
   max-width: 1500px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin-bottom: 60px;
+  padding-left: 2.1%;
 }
 
 .ProjectsList :hover {
@@ -51,5 +52,22 @@
 @media (max-width: 699px) {
   .ProjectsList {
     flex-direction: column;
+    padding-left: 0px;
+  }
+}
+
+/*  Large Phones / PLUS phones */
+@media (min-width: 700px) and (max-width: 899px) {
+  @media (max-height: 425px) {
+    .ProjectSection{
+      padding: 0px;
+    }
+    .ProjectsList{
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 0px;
+      /* padding-right: 2.1%; */
+    }
   }
 }

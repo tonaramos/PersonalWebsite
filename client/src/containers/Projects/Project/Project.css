@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  margin-right: 1.6%;
   margin-bottom: 40px;
   color: black;
   background-color: rgb(255, 255, 255); 
@@ -27,9 +28,8 @@
   top: 0;
 }
 
-.Project img:hover {
-  
-}
+/* .Project img:hover { 
+} */
 
 .Image {
   height: 200px;
@@ -52,7 +52,6 @@
 .Title {
   font-size: 1.7em;
   font-weight: 550;
-  /* color:rgb(0, 0, 0); */
   color: rgb(47, 47, 47);
   margin-bottom: 15px;
   text-align: center;
@@ -115,19 +114,13 @@
 
 .Tech :hover {
   box-shadow: none;
-  /* border: 1px solid brown; */
 }
 
 .img :hover {
    box-shadow: none;
 }
-/*
-0 4px 8px 0 rgba(59, 59, 59, 0.1),
- 0 6px 5px 0 rgba(59, 59, 59, 0.1);
-*/
 
-
-@media ( max-width: 900px) {  /* 1060*/
+@media ( max-width: 900px) {
   .Project {
     width: 48%;
     min-width: 300px; 
@@ -138,5 +131,46 @@
   .Project {
     width: 100%;
     min-width: 320px;
+  }
+}
+
+@media (min-height: 500px) and (max-height: 899px) {
+  @media (max-width: 599px) {
+    .DescriptionContainer {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    }
+    .Title{
+      min-height: 40px;
+      margin-bottom: 0px;
+    }
+    .Description {
+    margin-bottom: 10px;
+    }
+  }
+}
+
+@media (min-width: 660px) and (max-width: 899px) {
+  @media (max-height: 425px) {
+    .Project{
+      flex-direction: row;
+      margin-right: 0px;
+      width: 97%;
+      margin: 0px, 1%, 0px, 1%;
+      align-items: flex-start;
+    }
+    .Image{
+      min-width: 200px;
+      margin-left: 18px;
+      margin-right: 5px;
+      align-self: center;
+    }
+    .DescriptionContainer {
+      padding: 10px;
+    }
+    .Title{
+      margin-top: 15px;
+      margin-bottom: 0px;
+    }
   }
 }
