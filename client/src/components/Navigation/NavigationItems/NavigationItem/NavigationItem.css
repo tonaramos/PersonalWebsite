@@ -61,6 +61,7 @@ rgb(35, 123, 197)
   }
 }
 
+
 @media (min-width: 1250px) {
   .NavigationItem {
     margin: 0;
@@ -106,5 +107,24 @@ rgb(35, 123, 197)
     width: 100%;
     background-color:  rgb(7, 64, 110);
     color: white;
+  }
+}
+
+@media (max-height: 574px) {
+  @media (min-width: 825px) {
+    .NavigationItem a {
+      padding: 16px 4vh;
+    }
+  }
+  @media (min-width: 900px) {
+    .NavigationItem a {
+      padding: 16px 12vh;
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  .NavigationItem a {
+    padding: 16px 3vh;
   }
 }

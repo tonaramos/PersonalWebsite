@@ -41,7 +41,7 @@ class menuBar extends Component {
   render() {
     const { winHeight, winPosition, winInnerWidth } = this.state;
     const { drawerToggleClicked } = this.props;
-
+    const { innerHeight, innerWidth } = window;
     let style = null;
     if ((winPosition >= winHeight * 1.18) && (winInnerWidth > 824)) {
       style = {
@@ -51,9 +51,10 @@ class menuBar extends Component {
     }
     let insertLogo = null;
     if (
-      (winInnerWidth < 825 && winInnerWidth > 499)
-      || (winInnerWidth < 825 && winHeight < 499)
-      || (winInnerWidth > 500 && winHeight > 574)) {
+      (innerWidth < 825 && innerWidth > 499 && innerHeight > 360)
+      || (innerWidth < 825 && innerHeight < 499 && innerHeight > 360)
+      || (innerWidth > 500 && innerHeight > 574)
+      || (innerWidth > 1500 && innerHeight > 2000)) {
       insertLogo = <Logo />;
     }
     return (

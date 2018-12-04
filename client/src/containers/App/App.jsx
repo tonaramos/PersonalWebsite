@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { NavHashLink as NavLink } from 'react-router-dom';
 import axios from '../../axios-messages';
 import Layout from '../../hoc/Layout/Layout';
 import Cover from '../../components/Cover/Cover';
@@ -8,7 +7,7 @@ import Projects from '../Projects/Projects';
 import Contact from '../Contact/Contact';
 import Footer from '../../components/Footer/Footer';
 import Gallery from '../Gallery/Gallery';
-import Backdrop from '../../components/Backdrop/Backdrop';
+import PhotoBackdrop from '../../components/PhotoBackdrop/PhotoBackdrop';
 
 import FilePOne from '../../assets/pone.png';
 import FilePTwo from '../../assets/ptwo.png';
@@ -117,13 +116,11 @@ class App extends Component {
 
   render() {
     const { name, projects } = this.state;
-    window.scroll(0, 500);
-    /* <Route path="/About" component={About} /> */
     return (
       <Layout>
         <div className="pageContents">
           <div className="board">
-            <Backdrop />
+            <PhotoBackdrop />
             <Cover name={name} />
             <About />
             <Projects list={projects} />

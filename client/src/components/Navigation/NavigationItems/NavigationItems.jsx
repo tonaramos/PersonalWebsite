@@ -11,7 +11,7 @@ const navigationItems = () => (
         hash: 'Home',
       }}
       // exact
-      scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
+      scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
     >
       <NavigationItem>
         Home
@@ -22,7 +22,7 @@ const navigationItems = () => (
         // pathname: '',
         hash: 'About',
       }}
-      scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
+      scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
     >
       <NavigationItem>
         About
@@ -35,7 +35,7 @@ const navigationItems = () => (
         // search: '?project-search',
       }}
       // exact
-      scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
+      scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
     >
       <NavigationItem>
         Projects
@@ -48,7 +48,7 @@ const navigationItems = () => (
         // search: '?Gallery-Search',
       }}
       // exact
-      scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
+      scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
     >
       <NavigationItem>
         Gallery
@@ -59,7 +59,7 @@ const navigationItems = () => (
         // pathname: '/Contact',
         hash: 'Contact',
       }}
-      scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
+      scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
     >
       <NavigationItem>
         Contact
@@ -70,7 +70,7 @@ const navigationItems = () => (
         // pathname: '/Más+',
         hash: 'Más+',
       }}
-      scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
+      scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
     >
       <NavigationItem>
         {'Más+'}

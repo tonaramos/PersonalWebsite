@@ -19,7 +19,7 @@ function Footer() {
             // pathname: '/Home',
             hash: 'Home',
           }}
-          scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
+          scroll={el => el.scrollIntoView({ behavior: 'smooth', block: 'start' })}
         >
           <img key="BackToTop" src={UpButton} alt="UpButton" className={classes.SocialMediaIcon} />
         </NavLink>

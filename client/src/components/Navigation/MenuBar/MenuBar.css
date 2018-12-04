@@ -31,3 +31,24 @@
       background-color: none;
     }
   }
+
+/*  Desktop narrow landscape */
+  @media (min-width: 825px) {
+    @media (max-height: 574px) {
+      
+      .MenuBar {
+        padding: 0;
+      }
+    }
+  }
+
+  /* Large Tablet */
+  @media (min-width: 1500px) {
+    @media (min-height: 2000px) {
+      
+      .MenuBar {
+        /* padding-left: 900px; 
+        padding-right: 1200px; */
+      }
+    }
+  }

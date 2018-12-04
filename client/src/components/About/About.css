@@ -59,7 +59,7 @@
   } 
 }
 
-@media (max-width: 799px) {
+@media (max-width: 824px) {
   .About {
     background-color: rgb(255, 187, 0, 1);
     background: linear-gradient(180deg, #45caff 62%, rgb(255, 187, 0, 1) 30%); 
@@ -73,7 +73,7 @@
   } 
 }
 
-@media (max-width: 799px) {
+@media (max-width: 824px) {
   .About {
     padding: 5%;
     padding-top: 60px;
@@ -87,7 +87,7 @@
   justify-content: space-around;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 824px) {
   .AboutMe {
     display: flex;
     flex-direction: column-reverse;
@@ -134,7 +134,7 @@
   align-items: center;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 824px) {
   .WhatsATona {
     display: flex;
     flex-direction: column-reverse;
@@ -154,7 +154,7 @@
   text-align: justify;
 }
 
-@media (max-width: 799px) {
+@media (max-width: 824px) {
   .Text {
     width: 90%;
     margin-top: 45px;
