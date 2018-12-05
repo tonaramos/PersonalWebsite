@@ -66,3 +66,10 @@ public/
 #Keys
 .env
 config.json
+
+##vscode
+.vscode
+
+##DS_Store
+.DS_Store
+
