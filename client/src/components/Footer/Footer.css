@@ -1,46 +1,68 @@
 .Footer {
   color: whitesmoke;
-  /* background-color: #11050a; */
   background-image: url(https://s3-us-west-1.amazonaws.com/tonaramoswebsite/darknight.png);
   background-color: rgb(12, 17, 24);
   min-height: 50vh;
+  min-width: 360px;
   width: 100vw;
-  padding: 5% 0 5% 0;
+  padding: 4% 35%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   box-sizing: border-box;
-  min-width: 350px;
+}
+
+@media (min-width: 1025px) and (max-width: 1350px){
+  .Footer{
+    padding: 4% 20%;
+  }
+}
+
+@media (max-width: 1024px){
+  .Footer{
+    padding: 6% 10%;
+  }
 }
 
 .Text {
   font-size: 1em;
   font-weight: 300;
-  /* color: black; */
   margin-bottom: 10px;
-  /* text-shadow: 0px 1px 2px rgb(255, 255, 255, .6); */
+  margin-top: 30px;
+  text-align: center;
 }
 
 .SocialMediaSection {
-width: 360px;
+width: 100%;
+height: 100%;
 display: flex;
-justify-content: space-between
+justify-content: space-between;
+flex-wrap: wrap;
 }
 
 .SocialMediaIcon {
   width: 50px;
   height: 50px;
+  margin: 15px;
+  align-self: center;
 }
     
 .ReturnButton {
-  /* background-color: transparent;
-  border: solid 1px ivory;
-  font-weight: 100;
-  font-size: .85em;
-  padding: 5px 15px 5px 15px; */
   display: flex;
   align-self: center;
   border-radius: 100px;
-  /* margin-top: 10px; */
+  margin: 25px;
+}
+
+/* mobile portrait*/
+@media (min-height: 500px) and (max-height: 824px){
+  @media(max-width: 499px){
+    .Footer{
+      padding: 12%;  
+    }
+    .SocialMediaSection{
+      justify-content: space-around;
+    }
+  }
 }

@@ -26,9 +26,6 @@ function Footer() {
           <img key="BackToTop" src={UpButton} alt="UpButton" className={classes.SocialMediaIcon} />
         </NavLink>
       </Button>
-      {/* <div className={classes.Text}>
-        Build with  love care and tender
-      </div> */}
       <div className={classes.SocialMediaSection}>
         <a href="https://www.linkedin.com/in/tonaramos/">
           <img key="Linkedin" src={Linkedin} alt="pic" className={classes.SocialMediaIcon} />
@@ -46,11 +43,13 @@ function Footer() {
           <img key="Facebook" src={Facebook} alt="pic" className={classes.SocialMediaIcon} />
         </a>
       </div>
-      {/* <div className={classes.Text}>
-        Link to Resume
-      </div> */}
       <div className={classes.Text}>
-      © 2018 Tonatiuh Ramos. Made in San Francisco.
+        <p>
+          © 2018 Tonatiuh Ramos.
+        </p>
+        <p>
+          Made in San Francisco.
+        </p>
       </div>
     </div>
   );
