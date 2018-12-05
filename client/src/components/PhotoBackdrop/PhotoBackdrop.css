@@ -111,3 +111,21 @@
     }
   }
 }
+
+@media (min-width: 500px) and (max-width: 824px) {
+  @media (min-height: 415px) and (max-height: 599px) {
+    .PhotoBackdrop img{
+      margin-top: 200px;
+      margin-left: -150px;
+    }
+  }
+}
+
+@media (min-width: 500px) and (max-width: 824px) {
+  @media (min-height: 600px) and (max-height: 1023px) {
+    .PhotoBackdrop img{
+      /* margin-top: ; */
+      margin-left: -200px;
+    }
+  }
+}
