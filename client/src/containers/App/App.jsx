@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import axios from '../../axios-messages';
 import axios from 'axios';
 import Layout from '../../hoc/Layout/Layout';
 import Cover from '../../components/Cover/Cover';
@@ -87,36 +86,23 @@ class App extends Component {
 
   summitMessageHandler(info) {
     const { loading } = this.state;
+    this.setState({ loading: true });
     axios.post('/sendMessage', info)
       .then((response) => {
-        console.log(response.data);
+        this.setState({
+          loading: false,
+        });
         alert('Thanks for your message, I\'ll be in touch soon!');
       })
       .catch((error) => {
-        console.log('Error from the request', error);
-        alert('Your message failed to send, please try again later!');
+        this.setState({
+          loading: false,
+        });
+        console.log('Error from the request', error.response);
+        console.log('Error Code ', error.response.status, '-', error.response.statusText);
+        console.log('Error message', error.message);
+        alert(`Message failed to send: ${error.response.data.reason}. `, error.response.data.messsage);
       });
-
-
-
-
-
-    // alert('Thanks for your message, I\'ll be in touch soon!')
-    // this.setState({ loading: true });
-    // const message = info;
-    // axios.post('/message.json', info)
-    //   .then((response) => {
-    //     console.log(response);
-    //     // this.setState({
-    //     //   loading: false,
-    //     // });
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //     // this.setState({
-    //     //   loading: false,
-    //     // });
-    //   });
   }
 
   nameChangeHandler(event) {

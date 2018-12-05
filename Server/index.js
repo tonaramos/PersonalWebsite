@@ -6,29 +6,18 @@ const sgMail = require('@sendgrid/mail');
 
 sgMail.setApiKey(process.env.SENDGRID_KEY);
 
-
-// const nodemailer = require('nodemailer');
-// const sendgridTransport = require('nodemailer-sendgrid-transport');
-
-
 const app = express();
 
 app.use(bodyParser.json());
 
-// const transporter = nodemailer.createTransport(sendgridTransport({
-//   auth: {
-//     api_key: process.env.SENDGRID_KEY,
-//   },
-// }));
-
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.post('/sendMessage', (req, res, next) => {
-  console.log('The Request.Body at the Post handler-> ', req.body);
+  // console.log('The Request.Body at the Post handler-> ', req.body);
   const msg = {
     to: 'tona@tonatiuhramos.com',
     from: req.body.email,
-    subject: `Message from your website - ${req.body.name}!`,
+    subject: `TonatiuhRamos.com - Message from ${req.body.name}!`,
     text: req.body.message,
     html: `<p>${req.body.message}</p>`,
   };
@@ -39,7 +28,11 @@ app.post('/sendMessage', (req, res, next) => {
         body: req.body,
       });
     }).catch((err) => {
-      console.log(err);
+      // console.log('Error at the post handler-> ', err);
+      res.status(400).json({
+        message: 'Your message could not be send. Review your entries or try later.',
+        reason: err.response.body.errors[0].message,
+      });
     });
 });
 
