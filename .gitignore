@@ -62,3 +62,7 @@ typings/
 
 ##webpack default output folder
 public/
+
+#Keys
+.env
+config.json

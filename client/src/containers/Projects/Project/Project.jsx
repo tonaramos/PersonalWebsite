@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import classes from './Project.css';
 
 function Project({ project, image }) {
+  // console.log('The project key->', project);
   const techIconList = project.techStack.map((item) => {
-    return <img key="exImg" src={item} alt="pic" className={classes.TechIcon} />;
+    return <img key={item[1]} src={item[0]} alt="pic" className={classes.TechIcon} />;
   });
   return (
     <div className={classes.Project} key={project.id}>
@@ -36,21 +37,21 @@ function Project({ project, image }) {
 export default Project;
 
 Project.defaultProps = {
-  project: [{
-    id: '0',
-    name: 'My first project here',
-    summary: 'Short description',
-    description: 'Full description',
-    techStack: ['Javascript'],
-  }],
+  // project: [{
+  //   id: '0',
+  //   name: 'My first project here',
+  //   summary: 'Short description',
+  //   description: 'Full description',
+  //   techStack: ['Javascript'],
+  // }],
 };
 
 Project.propTypes = {
-  project: PropTypes.shape({
-    id: PropTypes.number,
-    name: PropTypes.string,
-    summary: PropTypes.string,
-    description: PropTypes.string,
-    techStack: PropTypes.arrayOf(PropTypes.string),
-  }),
+  // project: PropTypes.shape({
+  //   id: PropTypes.number,
+  //   name: PropTypes.string,
+  //   summary: PropTypes.string,
+  //   description: PropTypes.string,
+  //   techStack: PropTypes.arrayOf(PropTypes.string),
+  // }),
 };

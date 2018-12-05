@@ -7,20 +7,18 @@ const navigationItem = (props) => {
   const { children, link, active } = props;
   return (
     <li className={classes.NavigationItem}>
-      <a
-        href={link}
-        className={active ? classes.active : null}
-      >
+      <div>
+        {/* // href={link}
+        // className={active ? classes.active : null}
+      > */}
         {children}
-      </a>
+      </div>
     </li>
   );
 };
 
 navigationItem.propTypes = {
   children: PropTypes.any.isRequired,
-  link: PropTypes.any.isRequired,
-  active: PropTypes.any.isRequired,
 };
 
 export default navigationItem;

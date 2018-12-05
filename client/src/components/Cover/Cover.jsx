@@ -20,7 +20,7 @@ function Cover() {
             }}
             scroll={el => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
           >
-            {'- Say Hello -'} 
+            {'- Say Hello -'}
           </NavLink>
         </Button>
       </div>
@@ -32,5 +32,5 @@ function Cover() {
 export default Cover;
 
 Cover.propTypes = {
-  name: PropTypes.string.isRequired,
+  // name: PropTypes.string.isRequired,
 };

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import axios from '../../axios-messages';
+// import axios from '../../axios-messages';
+import axios from 'axios';
 import Layout from '../../hoc/Layout/Layout';
 import Cover from '../../components/Cover/Cover';
 import About from '../../components/About/About';
@@ -45,7 +46,7 @@ class App extends Component {
         name: 'DataTable',
         summary: 'System design of OpenTable Reviews',
         description: 'Scaled microservice to handle 200rps with 70M records of user data by deploying two EC2 instances and multi-node Cassandra cluster. Load tested with Artillery.io, Loadder.io, and New Relic to analyse response times, and potential bottlenecks. Resulting in restructuring the database tables and adding indexes for faster queries. Reduced initial page load time to 350ms by implementing React server-side rendering and a Redis cache system.',
-        techStack: [redisLogo, postgresqlLogo, newRelicLogo, dockerLogo],
+        techStack: [[redisLogo, 'Redis'], [postgresqlLogo, 'PostgreSQL'], [newRelicLogo, 'NewRelic'], [dockerLogo, 'Docker']],
       }, {
         id: 1,
         image: FilePTwo,
@@ -53,7 +54,7 @@ class App extends Component {
         name: 'Napbnb',
         summary: 'Property listing and title Gallery',
         description: 'Used React.js to developed a single page flexible microservice that displays an interactive image carousel and  description listing of a properties. Created a Mongo database hosted in Mlab that could handle and store the different size of each property information for  thousands of properties.',
-        techStack: [nodeLogo, expressLogo, mongodbLogo, awsLogo],
+        techStack: [[nodeLogo, 'Nodejs'], [expressLogo, 'Express'], [mongodbLogo, 'MongoDB'], [awsLogo, 'AWS']],
       }, {
         id: 2,
         name: 'T-minus',
@@ -61,7 +62,7 @@ class App extends Component {
         webAddress: null,
         summary: 'Live multiplayer game',
         description: 'Used ReactJS on the client side and NodeJS/Socket.io on server side to create a realtime race course. Used MongoDB to have a registry system of game users, record times, and usage of the game. Created a seamless interface by reducing the number of actions a user needs to take to move between stages with a countdown for login and race stages.',
-        techStack: [reactLogo, socketioLogo, mongodbLogo, herokuLogo],
+        techStack: [[reactLogo, 'Reactjs'], [socketioLogo, 'Socketio'], [mongodbLogo, 'MongoDB'], [herokuLogo, 'Heroku']],
       }, {
         id: 3,
         image: BurritoBuilder,
@@ -69,7 +70,7 @@ class App extends Component {
         name: 'Burrito Builder',
         summary: 'Online burrito ordering site',
         description: 'Used React.js to developed a single page flexible microservice that displays an interactive image carousel and  description listing of a properties. Created a Mongo database hosted in Mlab that could handle and store the different size of each property information for  thousands of properties.',
-        techStack: [reduxLogo, css3ModulesLogo, JestLogo, webpackLogo],
+        techStack: [[reduxLogo, 'Redux'], [css3ModulesLogo, 'CSSModules'], [JestLogo, 'Jest'], [webpackLogo, 'Webpack']],
       }, {
         id: 3,
         image: HelloWorld,
@@ -77,37 +78,45 @@ class App extends Component {
         name: 'Personal Website',
         summary: 'Description Listing and title Gallery',
         description: 'Used React.js to developed a single page flexible microservice that displays an interactive image carousel and  description listing of a properties. Created a Mongo database hosted in Mlab that could handle and store the different size of each property information for  thousands of properties.',
-        techStack: [nodeLogo, webpackLogo, babelLogo, AWSS3Logo],
+        techStack: [[nodeLogo, 'Nodejs'], [webpackLogo, 'Webpack'], [babelLogo, 'Babel'], [AWSS3Logo, 'AWSS3']],
       }],
     };
     this.summitMessageHandler = this.summitMessageHandler.bind(this);
     this.nameChangeHandler = this.nameChangeHandler.bind(this);
   }
 
-  // componentDidUpdate() {
-  //   ReactDOM.findDOMNode(this).scrollTop = 0;
-  // }
-
   summitMessageHandler(info) {
     const { loading } = this.state;
-    // alert('Thanks for your message, I\'ll be in touch soon!')
-
-    // this.setState({ loading: true });
-
-    // const message = info;
-    axios.post('/message.json', info)
+    axios.post('/sendMessage', info)
       .then((response) => {
-        console.log(response);
-        // this.setState({
-        //   loading: false,
-        // });
+        console.log(response.data);
+        alert('Thanks for your message, I\'ll be in touch soon!');
       })
       .catch((error) => {
-        console.log(error);
-        // this.setState({
-        //   loading: false,
-        // });
+        console.log('Error from the request', error);
+        alert('Your message failed to send, please try again later!');
       });
+
+
+
+
+
+    // alert('Thanks for your message, I\'ll be in touch soon!')
+    // this.setState({ loading: true });
+    // const message = info;
+    // axios.post('/message.json', info)
+    //   .then((response) => {
+    //     console.log(response);
+    //     // this.setState({
+    //     //   loading: false,
+    //     // });
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //     // this.setState({
+    //     //   loading: false,
+    //     // });
+    //   });
   }
 
   nameChangeHandler(event) {

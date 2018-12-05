@@ -18,7 +18,7 @@ const button = (props) => {
 
 button.propTypes = {
   children: PropTypes.any.isRequired,
-  clicked: PropTypes.any.isRequired,
+  // clicked: PropTypes.any.isRequired,
 };
 
 export default button;

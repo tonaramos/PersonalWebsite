@@ -19,16 +19,16 @@ rgb(35, 123, 197)
   display: block;
   width: 100%;
 }
-.NavigationItem a {
+.NavigationItem div {
   text-decoration: none;
   width: 100%;
   box-sizing: border-box;
   display: block;
 }
 
-.NavigationItem a:hover,
-.NavigationItem a:active,
-.NavigationItem a.active {
+.NavigationItem div:hover,
+.NavigationItem div:active,
+.NavigationItem div.active {
   color: rgb(7, 64, 110);
   
 }
@@ -40,23 +40,23 @@ rgb(35, 123, 197)
     height: auto;
     align-items: center;
   }
-  .NavigationItem a {
+  .NavigationItem div {
     color: white;
     height: 100%;
     padding: 16px 1vh;
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   }
   
-  .NavigationItem a:hover,
-  .NavigationItem a:active,
-  .NavigationItem a.active {
+  .NavigationItem div:hover,
+  .NavigationItem div:active,
+  .NavigationItem div.active {
     background-color:   rgb(7, 64, 110);
     color: white;
   }
 }
 
 @media (min-width: 880px) {
-  .NavigationItem a {
+  .NavigationItem div {
     padding: 16px 2.5vh;
   }
 }
@@ -69,16 +69,16 @@ rgb(35, 123, 197)
     height: auto;
     align-items: center;
   }
-  .NavigationItem a {
+  .NavigationItem div {
     color: white;
     height: 100%;
     padding: 16px 5vh;
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   }
   
-  .NavigationItem a:hover,
-  .NavigationItem a:active,
-  .NavigationItem a.active {
+  .NavigationItem div:hover,
+  .NavigationItem div:active,
+  .NavigationItem div.active {
     background-color:  rgb(7, 64, 110);
     color: white;
   }
@@ -93,7 +93,7 @@ rgb(35, 123, 197)
     height: auto;
     align-items: center;
   }
-  .NavigationItem a {
+  .NavigationItem div {
     width: 100%;
     color:  rgb(35, 123, 197);
     height: 100%;
@@ -101,9 +101,9 @@ rgb(35, 123, 197)
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
   }
   
-  .NavigationItem a:hover,
-  .NavigationItem a:active,
-  .NavigationItem a.active {
+  .NavigationItem div:hover,
+  .NavigationItem div:active,
+  .NavigationItem div.active {
     width: 100%;
     background-color:  rgb(7, 64, 110);
     color: white;
@@ -112,19 +112,19 @@ rgb(35, 123, 197)
 
 @media (max-height: 574px) {
   @media (min-width: 825px) {
-    .NavigationItem a {
+    .NavigationItem div {
       padding: 16px 4vh;
     }
   }
   @media (min-width: 900px) {
-    .NavigationItem a {
+    .NavigationItem div {
       padding: 16px 12vh;
     }
   }
 }
 
 @media (min-width: 1500px) {
-  .NavigationItem a {
+  .NavigationItem div {
     padding: 16px 3vh;
   }
 }

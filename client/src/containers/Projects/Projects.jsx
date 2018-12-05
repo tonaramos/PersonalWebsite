@@ -30,21 +30,21 @@ function Projects({ list }) {
 export default Projects;
 
 Projects.defaultProps = {
-  list: [{
-    id: '0',
-    name: 'My first project here',
-    summary: 'Short description',
-    description: 'Full description',
-    techStack: ['Javascript'],
-  }],
+  // list: [{
+  //   id: '0',
+  //   name: 'My first project here',
+  //   summary: 'Short description',
+  //   description: 'Full description',
+  //   techStack: ['Javascript'],
+  // }],
 };
 
 Projects.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number,
-    name: PropTypes.string,
-    summary: PropTypes.string,
-    description: PropTypes.string,
-    techStack: PropTypes.arrayOf(PropTypes.string),
-  })),
+  // list: PropTypes.arrayOf(PropTypes.shape({
+  //   id: PropTypes.number,
+  //   name: PropTypes.string,
+  //   summary: PropTypes.string,
+  //   description: PropTypes.string,
+  //   techStack: PropTypes.arrayOf(PropTypes.string),
+  // })),
 };
