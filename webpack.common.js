@@ -3,7 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: { main: './client/src/index.jsx' },
+  entry: { app: './client/src/index.jsx' },
   resolve: { extensions: ['.js', '.jsx'] },
   output: {
     path: path.resolve(__dirname, 'public'),
@@ -49,11 +49,30 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
+      // filename: './index.html',
       template: './client/index.html',
-      filename: './index.html',
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
   ],
 };
+
+// const path = require('path');
+// const CleanWebpackPlugin = require('clean-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
+// module.exports = {
+//   entry: {
+//     app: './client/src/index.jsx',
+//   },
+//   plugins: [
+//     new CleanWebpackPlugin(['dist']),
+//     new HtmlWebpackPlugin({
+//       title: 'Production'
+//     })
+//   ],
+//   output: {
+//     filename: '[name].bundle.js',
+//     path: path.resolve(__dirname, 'dist')
+//   }
+// };

@@ -50,6 +50,9 @@ function Footer() {
         <p>
           Made in San Francisco.
         </p>
+        <p>
+          v1.0 - 18.12
+        </p>
       </div>
     </div>
   );
