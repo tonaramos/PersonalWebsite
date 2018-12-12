@@ -9,11 +9,10 @@ sgMail.setApiKey(process.env.SENDGRID_KEY);
 const app = express();
 
 app.use(bodyParser.json());
-
+// static file serve
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.post('/sendMessage', (req, res, next) => {
-  // console.log('The Request.Body at the Post handler-> ', req.body);
   const msg = {
     to: 'tona@tonatiuhramos.com',
     from: req.body.email,
@@ -28,13 +27,14 @@ app.post('/sendMessage', (req, res, next) => {
         body: req.body,
       });
     }).catch((err) => {
-      // console.log('Error at the post handler-> ', err);
       res.status(400).json({
         message: 'Your message could not be send. Review your entries or try later.',
         reason: err.response.body.errors[0].message,
       });
     });
 });
+
+app.use((req, res) => res.sendFile(path.join(__dirname, '../public/index.html')));
 
 const port = process.env.PORT;
 app.listen(port, () => console.log(`Listening on port >>> ${port}`));
