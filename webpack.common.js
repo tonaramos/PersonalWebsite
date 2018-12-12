@@ -8,6 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: '[name].js',
+    globalObject: 'this',
   },
   module: {
     rules: [
@@ -34,8 +35,34 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]_[local]_[hash:base64:5]',
+        use: [
+          require.resolve('style-loader'),
+          {
+            loader: require.resolve('css-loader'),
+            options: {
+              importLoaders: 1,
+              modules: true,
+              localIdentName: '[name]__[local]__[hash:base64:5]',
+            },
+          },
+        ],
       },
+      // {
+      //   test: /\.css$/,
+      // // loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=
+      // // [name]_[local]_[hash:base64:5]',
+      //   use: [
+      //     require.resolve('style-loader'),
+      //     {
+      //       loader: require.resolve('css-loader'),
+      //       options: {
+      //         importLoaders: 1,
+      //         modules: true,
+      //         localIdentName: '[name]__[local]__[hash:base64:5]',
+      //       }
+      //     }
+      //   ]
+      // },
       {
         test: /\.(png|jpg|gif)$/,
         use: [
@@ -49,7 +76,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      // filename: './index.html',
+      filename: './index.html',
       template: './client/index.html',
     }),
     new MiniCssExtractPlugin({

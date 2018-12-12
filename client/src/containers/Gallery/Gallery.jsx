@@ -2,39 +2,23 @@ import React from 'react';
 import classes from './Gallery.css';
 import Segment from '../../hoc/Segment/Segment';
 
-import File2 from '../../assets/File2.jpg';
-import File3 from '../../assets/File3.jpg';
-import File4 from '../../assets/File4.jpg';
-import File5 from '../../assets/File5.jpg';
-import File6 from '../../assets/File6.jpg';
-import File7 from '../../assets/File7.jpg';
-import File8 from '../../assets/File8.jpg';
-import File10 from '../../assets/File10.jpg';
-import File11 from '../../assets/File11.jpg';
-import File12 from '../../assets/File19.jpg';
-import File14 from '../../assets/File14.jpg';
-import File21 from '../../assets/File21.jpg';
-import File16 from '../../assets/File16.jpg';
-import File17 from '../../assets/File17.jpg';
-import File18 from '../../assets/File18.jpg';
-
-
 const listOfPics = [
-  { title: 'file2', item: File2 },
-  { title: 'file3', item: File3 },
-  { title: 'file4', item: File4 },
-  { title: 'file5', item: File5 },
-  { title: 'file6', item: File6 },
-  { title: 'file7', item: File7 },
-  { title: 'file8', item: File8 },
-  { title: 'file10', item: File10 },
-  { title: 'file11', item: File11 },
-  { title: 'file12', item: File12 },
-  { title: 'file14', item: File14 },
-  { title: 'file21', item: File21 },
-  { title: 'file16', item: File16 },
-  { title: 'file17', item: File17 },
-  { title: 'file18', item: File18 }];
+  { title: 'file2', item: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/File2.jpg' },
+  { title: 'file3', item: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/File3.jpg' },
+  { title: 'file4', item: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/File4.jpg' },
+  { title: 'file5', item: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/File5.jpg' },
+  { title: 'file6', item: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/File6.jpg' },
+  { title: 'file7', item: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/File7.jpg' },
+  { title: 'file8', item: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/File8.jpg' },
+  { title: 'file10', item: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/File10.jpg' },
+  { title: 'file11', item: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/File11.jpg' },
+  { title: 'file12', item: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/File12.jpg' },
+  { title: 'file14', item: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/File14.jpg' },
+  { title: 'file21', item: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/File21.jpg' },
+  { title: 'file16', item: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/File16.jpg' },
+  { title: 'file17', item: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/File17.jpg' },
+  { title: 'file18', item: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/File18.jpg' },
+];
 
 function Gallery() {
   const mosaic = listOfPics.map(info => (

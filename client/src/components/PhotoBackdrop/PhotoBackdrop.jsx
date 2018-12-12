@@ -1,12 +1,10 @@
 import React from 'react';
 import classes from './PhotoBackdrop.css';
 
-import BackdropPic from '../../assets/A.jpg';
-
 function PhotoBackdrop() {
   return (
     <div className={classes.PhotoBackdrop}>
-      <img key="Backdrop" src={BackdropPic} alt="pic" />
+      <img key="Backdrop" src="https://s3-us-west-1.amazonaws.com/tonaramoswebsite/A.jpg" alt="pic" />
     </div>
   );
 }

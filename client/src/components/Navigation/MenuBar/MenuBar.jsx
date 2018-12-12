@@ -19,15 +19,22 @@ class menuBar extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    const isClient = typeof window !== 'undefined';
+    if (isClient) {
+      window.addEventListener('scroll', this.handleScroll);
+    }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    const isClient = typeof window !== 'undefined';
+    if (isClient) {
+      window.removeEventListener('scroll', this.handleScroll);
+    }
   }
 
   handleScroll() {
-    const { innerHeight, innerWidth, scrollY } = window;
+    const isClient = typeof window !== 'undefined';
+    const { innerHeight, innerWidth, scrollY } = isClient ? window : null;
     const { winHeight, winInnerWidth } = this.state;
     if (innerHeight !== winHeight) {
       this.setState({ winHeight: innerHeight });
@@ -39,9 +46,10 @@ class menuBar extends Component {
   }
 
   render() {
+    const isClient = typeof window !== 'undefined';
     const { winHeight, winPosition, winInnerWidth } = this.state;
     const { drawerToggleClicked } = this.props;
-    const { innerHeight, innerWidth } = window;
+    const { innerHeight, innerWidth } = isClient ? window : null;
     let style = null;
     if ((winPosition >= winHeight * 1.18) && (winInnerWidth > 824)) {
       style = {

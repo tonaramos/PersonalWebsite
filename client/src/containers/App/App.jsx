@@ -9,29 +9,6 @@ import Footer from '../../components/Footer/Footer';
 import Gallery from '../Gallery/Gallery';
 import PhotoBackdrop from '../../components/PhotoBackdrop/PhotoBackdrop';
 
-import FilePOne from '../../assets/pone.png';
-import FilePTwo from '../../assets/ptwo.png';
-import FilePThree from '../../assets/pthree.png';
-import HelloWorld from '../../assets/HelloWorld.png';
-import reactLogo from '../../assets/react.png';
-import reduxLogo from '../../assets/Redux.png';
-import expressLogo from '../../assets/expressjs.png';
-import nodeLogo from '../../assets/nodejs.png';
-import awsLogo from '../../assets/AWS.png';
-import dockerLogo from '../../assets/docker.png';
-import herokuLogo from '../../assets/heroku.png';
-import socketioLogo from '../../assets/Socketio.png';
-import mongodbLogo from '../../assets/Mongodb.png';
-import postgresqlLogo from '../../assets/postgresql.png';
-import redisLogo from '../../assets/Redis.png';
-import webpackLogo from '../../assets/Webpack.png';
-import babelLogo from '../../assets/babel.png';
-import newRelicLogo from '../../assets/NewRelic.png';
-import css3ModulesLogo from '../../assets/CSSModules.png';
-import AWSS3Logo from '../../assets/awsS3.png';
-import JestLogo from '../../assets/Jest.png';
-import BurritoBuilder from '../../assets/BurritoBuilder.png';
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -40,44 +17,44 @@ class App extends Component {
       name: 'Tona',
       projects: [{
         id: 0,
-        image: FilePOne,
+        image: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/pone.png',
         webAddress: null,
         name: 'DataTable',
         summary: 'System design of OpenTable Reviews',
         description: 'Scaled microservice to handle 200rps with 70M records of user data by deploying two EC2 instances and multi-node Cassandra cluster. Load tested with Artillery.io, Loadder.io, and New Relic to analyse response times, and potential bottlenecks. Resulting in restructuring the database tables and adding indexes for faster queries. Reduced initial page load time to 350ms by implementing React server-side rendering and a Redis cache system.',
-        techStack: [[redisLogo, 'Redis'], [postgresqlLogo, 'PostgreSQL'], [newRelicLogo, 'NewRelic'], [dockerLogo, 'Docker']],
+        techStack: [['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/Redis.png', 'Redis'], ['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/postgresql.png', 'PostgreSQL'], ['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/NewRelic.png', 'NewRelic'], ['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/docker.png', 'Docker']],
       }, {
         id: 1,
-        image: FilePTwo,
+        image: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/ptwo.png',
         webAddress: null,
         name: 'Napbnb',
         summary: 'Property listing and title Gallery',
         description: 'Used React.js to developed a single page flexible microservice that displays an interactive image carousel and  description listing of a properties. Created a Mongo database hosted in Mlab that could handle and store the different size of each property information for  thousands of properties.',
-        techStack: [[nodeLogo, 'Nodejs'], [expressLogo, 'Express'], [mongodbLogo, 'MongoDB'], [awsLogo, 'AWS']],
+        techStack: [['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/nodejs.png', 'Nodejs'], ['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/expressjs.png', 'Express'], ['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/Mongodb.png', 'MongoDB'], ['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/AWS.png', 'AWS']],
       }, {
         id: 2,
         name: 'T-minus',
-        image: FilePThree,
+        image: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/pthree.png',
         webAddress: null,
         summary: 'Live multiplayer game',
         description: 'Used ReactJS on the client side and NodeJS/Socket.io on server side to create a realtime race course. Used MongoDB to have a registry system of game users, record times, and usage of the game. Created a seamless interface by reducing the number of actions a user needs to take to move between stages with a countdown for login and race stages.',
-        techStack: [[reactLogo, 'Reactjs'], [socketioLogo, 'Socketio'], [mongodbLogo, 'MongoDB'], [herokuLogo, 'Heroku']],
+        techStack: [['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/react.png', 'Reactjs'], ['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/Socketio.png', 'Socketio'], ['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/Mongodb.png', 'MongoDB'], ['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/heroku.png', 'Heroku']],
       }, {
         id: 3,
-        image: BurritoBuilder,
+        image: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/FoodBuilder.png',
         webAddress: null,
         name: 'Burrito Builder',
         summary: 'Online burrito ordering site',
         description: 'Used React.js to developed a single page flexible microservice that displays an interactive image carousel and  description listing of a properties. Created a Mongo database hosted in Mlab that could handle and store the different size of each property information for  thousands of properties.',
-        techStack: [[reduxLogo, 'Redux'], [css3ModulesLogo, 'CSSModules'], [JestLogo, 'Jest'], [webpackLogo, 'Webpack']],
+        techStack: [['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/Redux.png', 'Redux'], ['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/CSSModules.png', 'CSSModules'], ['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/Jest.png', 'Jest'], ['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/Webpack.png', 'Webpack']],
       }, {
         id: 3,
-        image: HelloWorld,
+        image: 'https://s3-us-west-1.amazonaws.com/tonaramoswebsite/HelloWorld.png',
         webAddress: 'https://www.tonatiuhramos.com',
         name: 'Personal Website',
         summary: 'Description Listing and title Gallery',
         description: 'Used React.js to developed a single page flexible microservice that displays an interactive image carousel and  description listing of a properties. Created a Mongo database hosted in Mlab that could handle and store the different size of each property information for  thousands of properties.',
-        techStack: [[nodeLogo, 'Nodejs'], [webpackLogo, 'Webpack'], [babelLogo, 'Babel'], [AWSS3Logo, 'AWSS3']],
+        techStack: [['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/nodejs.png', 'Nodejs'], ['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/Webpack.png', 'Webpack'], ['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/babel.png', 'Babel'], ['https://s3-us-west-1.amazonaws.com/tonaramoswebsite/awsS3.png', 'AWSS3']],
       }],
     };
     this.summitMessageHandler = this.summitMessageHandler.bind(this);
