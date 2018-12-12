@@ -30,9 +30,48 @@
   filter: grayscale(100%);
 }
 
+/* .Frame p{
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  z-index: 500;
+  color:white;
+  font-weight: 100;
+  font-style: oblique;
+  margin: 0;
+} */
+/* 
+.Frame p:hover{
+  display: none;
+} */
+
+.Container{
+ position: relative;
+ text-align: center;
+ color: white;
+ height: 250px;
+ width: 250px;
+}
+
+.Des{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ color: white;
+ z-index: 500;
+ font-size: .8em;
+ text-shadow: 0px 0px 5px rgb(37, 37, 37);
+
+}
+
+.Container:hover div{
+  display: none;
+}
+
 .Frame img:hover {
   filter: none;
-  filter: brightness(120%)
+  filter: brightness(120%);
 }
 
 @media (max-width: 1060px) {
@@ -40,6 +79,13 @@
     width: 200px;
     height: 200px;
   }
+  .Container{
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 200px;
+    width: 200px;
+   }
 }
 
 /* tablets profile */
@@ -52,6 +98,13 @@
       width: 25.1vw;
       height: 25.1vw;
     }
+    .Container{
+      position: relative;
+      text-align: center;
+      color: white;
+      height: 25.1vw;
+      width: 25.1vw;
+     }
   }
 }
 
@@ -65,5 +118,12 @@
       width: 45vw;
       height: 45vw;
     }
+    .Container{
+      position: relative;
+      text-align: center;
+      color: white;
+      height: 45vw;
+      width: 45vw;
+     }
   }
 }
